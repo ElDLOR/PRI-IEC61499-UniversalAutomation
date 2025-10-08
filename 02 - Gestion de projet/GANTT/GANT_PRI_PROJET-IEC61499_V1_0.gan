@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2025-08-25" view-index="0" gantt-divider-location="611" resource-divider-location="300" version="3.3.3309" locale="fr_FR">
+    <description/>
+    <view zooming-state="default:7" id="gantt-chart">
+        <field id="tpd3" name="Nom" width="397" order="0"/>
+        <field id="tpd4" name="Date de début" width="104" order="1"/>
+        <field id="tpd5" name="Date de fin" width="93" order="2"/>
+        <field id="tpd15" name="Notes" width="20" order="3"/>
+        <option id="filter.completedTasks" value="false"/>
+        <option id="filter.dueTodayTasks" value="false"/>
+        <option id="filter.overdueTasks" value="false"/>
+        <option id="filter.inProgressTodayTasks" value="false"/>
+        <option id="color.recent"><![CDATA[#ff3333]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nom" width="209" order="0"/>
+        <field id="1" name="Rôle par défaut" width="85" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" uid="8b7318848a6f464eb77efe0df2328be3" name="Phase 1 : Initialisation" meeting="false" start="2025-09-17" duration="21" complete="0" expand="true">
+            <task id="4" uid="e8a3221dfaf94e879c6e290f4625ff84" name="Fiche d'Ouverture de Projet" meeting="false" start="2025-09-17" duration="1" complete="0" expand="true"/>
+            <task id="1" uid="75f0b5b4dc5346f789f490e3f3b65961" name="Plan de développement" meeting="false" start="2025-09-25" duration="10" complete="0" expand="true"/>
+            <task id="2" uid="b9b9a437917f4c7080f90132c0304ef3" name="SPEC" meeting="false" start="2025-10-09" duration="5" complete="0" expand="true"/>
+        </task>
+        <task id="5" uid="b354ae99f4984f5d827f59c0cab9b1ed" name="Documents validés: FOP, Plan de développement, SPEC" color="#ff3333" meeting="true" start="2025-10-22" duration="0" complete="0" priority="4" expand="true"/>
+        <task id="6" uid="3a343b153727438494e64dc69e477500" name="Phase 2 : Analyse" meeting="false" start="2025-10-23" duration="6" complete="0" expand="true">
+            <task id="14" uid="2b45c249979c436d848156bca50475af" name="Analyse norme IEC61131" meeting="false" start="2025-10-23" duration="1" complete="0" expand="true"/>
+            <task id="15" uid="a76937cc90174118a557791e1793abeb" name="Analyse norme IEC61499" meeting="false" start="2025-10-23" duration="2" complete="0" expand="true"/>
+            <task id="16" uid="3d885e0a0b244e88a36fc610a8df8fb7" name="Analyse du fonctionnement du centre de tri de pièce FactoryIO" meeting="false" start="2025-10-27" duration="2" complete="0" expand="true"/>
+            <task id="17" uid="e3e4406ac0414c6099c5181137c8aa4a" name="Méthodologie de programmation du centre de tri de pièce (Norme IEC61131)" meeting="false" start="2025-10-29" duration="2" complete="0" expand="true"/>
+            <task id="18" uid="c0fec70d6634483d99391b7d2f3f7ea3" name="Méthodologie de programmation du centre de tri de pièce (Norme IEC61499)" meeting="false" start="2025-10-29" duration="2" complete="0" expand="true"/>
+        </task>
+        <task id="33" uid="9e6ce25497d7494ba76ef5da36e6d771" name="Phase 3 : Conception" meeting="false" start="2025-11-03" duration="12" complete="0" expand="true">
+            <task id="9" uid="e209de4a089742a5a16440dac8227b9e" name="Livret de conception général" meeting="false" start="2025-11-03" duration="5" complete="0" expand="true">
+                <task id="20" uid="69c4ac06fad74106a5c9780739548d1e" name="IEC61131 - Grafcet de fonctionnement général" meeting="false" start="2025-11-03" duration="4" complete="0" expand="true"/>
+                <task id="21" uid="aac028d1dc2c4d508367a04cec86af63" name="IEC61499 - Schéma bloc fonctionnel général" meeting="false" start="2025-11-03" duration="4" complete="0" expand="true"/>
+                <task id="22" uid="dd5a87b9666f418fbbe0374288361b3e" name="Fonctionnement général du centre de tri de pièce" meeting="false" start="2025-11-05" duration="1" complete="0" expand="true"/>
+                <task id="24" uid="45446852f159469b8b969006c220e712" name="Liste des capteurs Centre de tri de pièce" meeting="false" start="2025-11-06" duration="2" complete="0" expand="true"/>
+            </task>
+            <task id="10" uid="ecb4e5aaaa2c464ebb6919240df2366f" name="Livret de conception détaillé" color="#8cb6ce" meeting="false" start="2025-11-10" duration="7" complete="0" expand="true">
+                <task id="8" uid="644645cd9ddf42d5ae10ee41ec04b5cf" name="Diagrammes fonctionnels IEC 61499" color="#8cb6ce" meeting="false" start="2025-11-10" duration="7" complete="0" expand="true">
+                    <notes><![CDATA[Un diagramme fonctionnel IEC 61499, c’est un réseau de Function Blocks (FBs) connectés entre eux par :
+	Événements (déclencheurs)
+	Données (valeurs échangées).
+
+Tu définis les FBs de base (détection, tri, comptage, sécurité) et les FBs composites (enchaînements).
+
+Chaque FB a une interface claire :
+	Entrées événements (ex : EV_START, EV_STOP, EV_RESET).
+	Sorties événements (ex : EV_DONE, EV_ERROR).
+	Entrées données (ex : type_piece).
+	Sorties données (ex : compteur, commande_trieur).
+]]></notes>
+                </task>
+                <task id="7" uid="4c67cfacd9cc4caf86f80fff84582ef5" name="Diagrammes fonctionnels IEC 61131" meeting="false" start="2025-11-10" duration="7" complete="0" expand="true">
+                    <notes><![CDATA[- Un Grafcet avec :
+    États : Attente, Détection pièce, Acheminement, Tri, Comptage.
+    Transitions : capteur activé, convoyeur libre, trieur prêt, etc.
+
+- Une table des variables reliant les capteurs/convoyeurs aux	actions.
+
+- Organisation en POU (Program Organisation Unit) : Programme principal, blocs fonction (FBs IEC 61131), blocs de données.]]></notes>
+                </task>
+                <task id="26" uid="f92a85f08091444c8f651228e14a2de6" name="Fonctionnement détaillé du centre de tri de pièce FactoryIO" meeting="false" start="2025-11-12" duration="4" complete="0" expand="true"/>
+                <task id="25" uid="6deb625c71e64b38bbe244804d18e407" name="Tâble des variables centre de tri de pièce FactoryIO" meeting="false" start="2025-11-12" duration="3" complete="0" expand="true"/>
+            </task>
+            <task id="45" uid="18be628196d140508e0fe9a102ac264b" name="Documents validés : Livret de conception générale Livret de conception détaillé" color="#ff3333" meeting="true" start="2025-11-19" duration="0" complete="0" expand="true"/>
+        </task>
+        <task id="27" uid="02ccb092322e40e58adff087747a952c" name="Phase 4 : Réalisation" meeting="false" start="2025-11-20" duration="23" complete="0" expand="true">
+            <task id="28" uid="f2b9a2331c1243dfa4a69141dd6c821f" name="Programmation du centre de tri de pièce sur ECE" meeting="false" start="2025-11-20" duration="10" complete="0" expand="true"/>
+            <task id="29" uid="a0519a59c9da4694946c2e662d873655" name="Programmation du centre de tri de pièce sur EAE" meeting="false" start="2025-11-20" duration="10" complete="0" expand="true"/>
+            <task id="30" uid="bd152bcf7d6b458c871edfc872144cf6" name="Réalisation du centre de tri de pièce sur FactoryIO" meeting="false" start="2025-12-10" duration="5" complete="0" expand="true"/>
+            <task id="31" uid="67c77eb745dd490d975792ba29019ebe" name="Rédaction du document de méthodologie de programmation sur la norme IEC61499" meeting="false" start="2025-12-18" duration="3" complete="0" expand="true"/>
+        </task>
+        <task id="32" uid="aeb218d355274153a0983ff21dc88e6e" name="Phase 5 : Tests" meeting="false" start="2025-11-27" duration="17" complete="0" expand="true">
+            <task id="36" uid="8d00b4f6283c4cccb5ae9a8d23817dc4" name="Test unitaire programme EAE" meeting="false" start="2025-11-27" duration="7" complete="0" expand="true"/>
+            <task id="37" uid="bed36d3b61b44e7f9d8276e148149d24" name="Test unitaire programme ECE" color="#8cb6ce" meeting="false" start="2025-11-27" duration="7" complete="0" expand="true"/>
+            <task id="34" uid="a77522a770a34c4bb7b820b0470f558d" name="Test d'intégration FactoryIO et programme ECE" meeting="false" start="2025-12-18" duration="2" complete="0" expand="true"/>
+            <task id="35" uid="383eef7c909e4383baa79a0ca19a69c3" name="Test d'intégration FactoryIO et programme EAE" color="#8cb6ce" meeting="false" start="2025-12-18" duration="2" complete="0" expand="true"/>
+        </task>
+        <task id="38" uid="1070d5e27d3a4e899831e125f2a9d8b7" name="Phase 6 : Validation/Recette" meeting="false" start="2026-01-05" duration="23" complete="0" expand="true">
+            <task id="39" uid="53e2821058444044a89dbaae13a1eec6" name="Validation du fonctionnement avec le client" meeting="false" start="2026-01-05" duration="2" complete="0" expand="true"/>
+            <task id="41" uid="e5a778ffad5f42418a13bd4ec3bfd563" name="Rédaction du document de comparaison norme IEC61131 et IEC 61499" meeting="false" start="2026-01-08" duration="10" complete="0" expand="true"/>
+            <task id="43" uid="9bac99ac1aee488b85dbb1a794ccdbbe" name="Validation du document de comparaison par le client" meeting="false" start="2026-01-28" duration="2" complete="0" expand="true"/>
+            <task id="42" uid="a1212db1173248189afbdef8b7b43af3" name="Correction (optionnel)" meeting="false" start="2026-02-02" duration="3" complete="0" expand="true"/>
+        </task>
+        <task id="46" uid="7ef2a575d56f448990e0abc40ea7df77" name="Documents validés : PV de validation PV de recette" color="#ff3333" meeting="true" start="2026-02-11" duration="0" complete="0" expand="true"/>
+        <task id="44" uid="d1ace8ebbb39480fac9c1836452bdb01" name="Phase 7 : Clotûre du projet" meeting="false" start="2026-02-11" duration="1" complete="0" expand="true"/>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>

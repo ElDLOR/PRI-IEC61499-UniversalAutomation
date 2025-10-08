@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Projet testeur universel SNCF" company="SNCF" webLink="http://" view-date="2025-02-03" view-index="0" gantt-divider-location="319" resource-divider-location="300" version="3.3.3312" locale="fr_FR">
+    <description/>
+    <view zooming-state="default:6" id="gantt-chart">
+        <field id="tpd3" name="Nom" width="175" order="0"/>
+        <field id="tpd4" name="Date de début" width="70" order="1"/>
+        <field id="tpd5" name="Date de fin" width="73" order="2"/>
+        <field id="tpd15" name="Notes" width="20" order="3"/>
+        <option id="filter.completedTasks" value="false"/>
+        <option id="filter.dueTodayTasks" value="false"/>
+        <option id="filter.overdueTasks" value="false"/>
+        <option id="filter.inProgressTodayTasks" value="false"/>
+        <option id="color.recent"><![CDATA[#ff0033 #cc00cc #999900 #99ff00 #0099cc #ff99ff #00ffcc #000000 #66ff00 #ffff00]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nom" width="210" order="0"/>
+        <field id="1" name="Rôle par défaut" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars base-id="Aucun">
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+        <date year="2024" month="10" date="6" type="HOLIDAY"/>
+        <date year="2024" month="10" date="7" type="HOLIDAY"/>
+        <date year="2024" month="10" date="8" type="HOLIDAY"/>
+        <date year="2024" month="10" date="9" type="HOLIDAY"/>
+        <date year="2024" month="10" date="10" type="HOLIDAY"/>
+        <date year="2024" month="10" date="11" type="HOLIDAY"/>
+        <date year="2024" month="10" date="12" type="HOLIDAY"/>
+        <date year="2024" month="10" date="13" type="HOLIDAY"/>
+        <date year="2024" month="10" date="14" type="HOLIDAY"/>
+        <date year="2024" month="10" date="15" type="HOLIDAY"/>
+        <date year="2024" month="10" date="16" type="HOLIDAY"/>
+        <date year="2024" month="10" date="17" type="HOLIDAY"/>
+        <date year="2024" month="10" date="18" type="HOLIDAY"/>
+        <date year="2024" month="10" date="19" type="HOLIDAY"/>
+        <date year="2024" month="10" date="20" type="HOLIDAY"/>
+        <date year="2024" month="10" date="21" type="HOLIDAY"/>
+        <date year="2024" month="10" date="22" type="HOLIDAY"/>
+        <date year="2024" month="10" date="23" type="HOLIDAY"/>
+        <date year="2024" month="10" date="24" type="HOLIDAY"/>
+        <date year="2024" month="10" date="25" type="HOLIDAY"/>
+        <date year="2024" month="10" date="26" type="HOLIDAY"/>
+        <date year="2024" month="10" date="27" type="HOLIDAY"/>
+        <date year="2024" month="10" date="28" type="HOLIDAY"/>
+        <date year="2024" month="10" date="29" type="HOLIDAY"/>
+        <date year="2024" month="10" date="30" type="HOLIDAY"/>
+        <date year="2024" month="10" date="31" type="HOLIDAY"/>
+        <date year="2024" month="11" date="1" type="HOLIDAY"/>
+        <date year="2024" month="11" date="2" type="HOLIDAY"/>
+        <date year="2024" month="11" date="3" type="HOLIDAY"/>
+        <date year="2024" month="11" date="4" type="HOLIDAY"/>
+        <date year="2024" month="11" date="5" type="HOLIDAY"/>
+        <date year="2024" month="11" date="6" type="HOLIDAY"/>
+        <date year="2024" month="11" date="7" type="HOLIDAY"/>
+        <date year="2024" month="11" date="8" type="HOLIDAY"/>
+        <date year="2024" month="11" date="9" type="HOLIDAY"/>
+        <date year="2024" month="11" date="10" type="HOLIDAY"/>
+        <date year="2024" month="12" date="16" type="HOLIDAY"/>
+        <date year="2024" month="12" date="17" type="HOLIDAY"/>
+        <date year="2024" month="12" date="18" type="HOLIDAY"/>
+        <date year="2024" month="12" date="19" type="HOLIDAY"/>
+        <date year="2024" month="12" date="20" type="HOLIDAY"/>
+        <date year="2024" month="12" date="21" type="HOLIDAY"/>
+        <date year="2024" month="12" date="22" type="HOLIDAY"/>
+        <date year="2024" month="12" date="23" type="HOLIDAY"/>
+        <date year="2024" month="12" date="24" type="HOLIDAY"/>
+        <date year="2024" month="12" date="25" type="HOLIDAY"/>
+        <date year="2024" month="12" date="26" type="HOLIDAY"/>
+        <date year="2024" month="12" date="27" type="HOLIDAY"/>
+        <date year="2024" month="12" date="28" type="HOLIDAY"/>
+        <date year="2024" month="12" date="29" type="HOLIDAY"/>
+        <date year="2024" month="12" date="30" type="HOLIDAY"/>
+        <date year="2024" month="12" date="31" type="HOLIDAY"/>
+        <date year="2025" month="1" date="1" type="HOLIDAY"/>
+        <date year="2025" month="1" date="2" type="HOLIDAY"/>
+        <date year="2025" month="1" date="3" type="HOLIDAY"/>
+        <date year="2025" month="1" date="4" type="HOLIDAY"/>
+        <date year="2025" month="1" date="5" type="HOLIDAY"/>
+        <date year="2025" month="1" date="6" type="HOLIDAY"/>
+        <date year="2025" month="1" date="7" type="HOLIDAY"/>
+        <date year="2025" month="1" date="8" type="HOLIDAY"/>
+        <date year="2025" month="1" date="9" type="HOLIDAY"/>
+        <date year="2025" month="1" date="10" type="HOLIDAY"/>
+        <date year="2025" month="1" date="11" type="HOLIDAY"/>
+        <date year="2025" month="1" date="12" type="HOLIDAY"/>
+        <date year="2025" month="2" date="10" type="HOLIDAY"/>
+        <date year="2025" month="2" date="11" type="HOLIDAY"/>
+        <date year="2025" month="2" date="12" type="HOLIDAY"/>
+        <date year="2025" month="2" date="13" type="HOLIDAY"/>
+        <date year="2025" month="2" date="14" type="HOLIDAY"/>
+        <date year="2025" month="2" date="15" type="HOLIDAY"/>
+        <date year="2025" month="2" date="16" type="HOLIDAY"/>
+        <date year="2025" month="2" date="17" type="HOLIDAY"/>
+        <date year="2025" month="2" date="18" type="HOLIDAY"/>
+        <date year="2025" month="2" date="19" type="HOLIDAY"/>
+        <date year="2025" month="2" date="20" type="HOLIDAY"/>
+        <date year="2025" month="2" date="21" type="HOLIDAY"/>
+        <date year="2025" month="2" date="22" type="HOLIDAY"/>
+        <date year="2025" month="2" date="23" type="HOLIDAY"/>
+        <date year="2025" month="2" date="24" type="HOLIDAY"/>
+        <date year="2025" month="2" date="25" type="HOLIDAY"/>
+        <date year="2025" month="2" date="26" type="HOLIDAY"/>
+        <date year="2025" month="2" date="27" type="HOLIDAY"/>
+        <date year="2025" month="2" date="28" type="HOLIDAY"/>
+        <date year="2025" month="3" date="1" type="HOLIDAY"/>
+        <date year="2025" month="3" date="2" type="HOLIDAY"/>
+        <date year="2025" month="3" date="3" type="HOLIDAY"/>
+        <date year="2025" month="3" date="4" type="HOLIDAY"/>
+        <date year="2025" month="3" date="5" type="HOLIDAY"/>
+        <date year="2025" month="3" date="6" type="HOLIDAY"/>
+        <date year="2025" month="3" date="7" type="HOLIDAY"/>
+        <date year="2025" month="3" date="8" type="HOLIDAY"/>
+        <date year="2025" month="3" date="9" type="HOLIDAY"/>
+        <date year="2025" month="4" date="7" type="HOLIDAY"/>
+        <date year="2025" month="4" date="8" type="HOLIDAY"/>
+        <date year="2025" month="4" date="9" type="HOLIDAY"/>
+        <date year="2025" month="4" date="10" type="HOLIDAY"/>
+        <date year="2025" month="4" date="11" type="HOLIDAY"/>
+        <date year="2025" month="4" date="12" type="HOLIDAY"/>
+        <date year="2025" month="4" date="13" type="HOLIDAY"/>
+        <date year="2025" month="4" date="14" type="HOLIDAY"/>
+        <date year="2025" month="4" date="15" type="HOLIDAY"/>
+        <date year="2025" month="4" date="16" type="HOLIDAY"/>
+        <date year="2025" month="4" date="17" type="HOLIDAY"/>
+        <date year="2025" month="4" date="18" type="HOLIDAY"/>
+        <date year="2025" month="4" date="19" type="HOLIDAY"/>
+        <date year="2025" month="4" date="20" type="HOLIDAY"/>
+        <date year="2025" month="4" date="21" type="HOLIDAY"/>
+        <date year="2025" month="4" date="22" type="HOLIDAY"/>
+        <date year="2025" month="4" date="23" type="HOLIDAY"/>
+        <date year="2025" month="4" date="24" type="HOLIDAY"/>
+        <date year="2025" month="4" date="25" type="HOLIDAY"/>
+        <date year="2025" month="4" date="26" type="HOLIDAY"/>
+        <date year="2025" month="4" date="27" type="HOLIDAY"/>
+        <date year="2025" month="4" date="28" type="HOLIDAY"/>
+        <date year="2025" month="4" date="29" type="HOLIDAY"/>
+        <date year="2025" month="4" date="30" type="HOLIDAY"/>
+        <date year="2025" month="5" date="1" type="HOLIDAY"/>
+        <date year="2025" month="5" date="2" type="HOLIDAY"/>
+        <date year="2025" month="5" date="3" type="HOLIDAY"/>
+        <date year="2025" month="5" date="4" type="HOLIDAY"/>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="16" uid="e03ff2776fd642d49454cbb80c759dd2" name="Définition du projet" meeting="false" start="2024-09-20" duration="4" complete="0" expand="true">
+            <depend id="4" type="2" difference="0" hardness="Strong"/>
+            <task id="17" uid="27f2b32eca30406eb2c5f70307bcb7a5" name="Besoin du client" color="#00ff99" meeting="false" start="2024-09-20" duration="2" complete="0" expand="true"/>
+            <task id="18" uid="01fff03d29fc43fd9a1d2501c2146883" name="Besoin logiciel" color="#00cc99" meeting="false" start="2024-09-20" duration="4" complete="0" expand="true"/>
+            <task id="19" uid="f88afc0473b24b89b5a9b51cb288b75d" name="Besoin matériel" color="#009999" meeting="false" start="2024-09-20" duration="4" complete="0" expand="true"/>
+            <task id="31" uid="616cf7c9a77d486686b2335888ca32b7" name="Revue Définition du projet" color="#ff0033" meeting="true" start="2024-09-25" duration="0" complete="0" expand="true"/>
+        </task>
+        <task id="4" uid="d9bbe421885b4c62a2b0da628e09bf8e" name="Analyse fonctionnement des trames" color="#000000" meeting="false" start="2024-09-26" duration="20" complete="0" expand="true">
+            <depend id="5" type="2" difference="0" hardness="Strong"/>
+            <task id="24" uid="9cbf930a2b564efe934896bfccbc90ed" name="Analyse port série" color="#00ffcc" meeting="false" start="2024-09-26" duration="10" complete="0" expand="true">
+                <depend id="25" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="25" uid="590925fd291443949144675005288d64" name="Recherche matériel décodage trame" color="#00ffcc" meeting="false" start="2024-11-14" duration="10" complete="0" expand="true"/>
+            <task id="32" uid="e4a324ff46a64207baf5f11bdaadd6d5" name="Revue Spécifications" color="#ff0033" meeting="true" start="2024-11-27" duration="0" complete="0" expand="true"/>
+        </task>
+        <task id="5" uid="a9520605c0794387a5f26e0322804999" name="Conception de l’architecture globale" color="#00ccff" meeting="false" start="2024-11-28" duration="5" complete="0" expand="true">
+            <notes><![CDATA[Maquette]]></notes>
+            <depend id="6" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="33" uid="f76a1e8187f540bea06d40690fd0826d" name="Revue conception générale" color="#ff0033" meeting="true" start="2024-12-04" duration="0" complete="0" expand="true"/>
+        <task id="23" uid="e9127be34e15405b8362fd3034a98540" name="Développement des indicateurs qualités" meeting="false" start="2024-11-11" duration="10" complete="0" expand="true"/>
+        <task id="6" uid="3c351b4146354e75a9624520667d6a34" name="Conception détaillé" color="#0099cc" meeting="false" start="2024-12-05" duration="7" complete="0" expand="true">
+            <depend id="26" type="2" difference="0" hardness="Strong"/>
+            <task id="27" uid="480c0eabae824eeda4e477d88179b11a" name="Diagrammes" color="#0099cc" meeting="false" start="2024-12-05" duration="7" complete="0" expand="true">
+                <notes><![CDATA[Classe, cas d'utilisation, SF1D]]></notes>
+            </task>
+            <task id="28" uid="44df1f81b9aa4e58996f69b8cc6cd379" name="Ecriture test" color="#0099cc" meeting="false" start="2024-12-05" duration="7" complete="0" expand="true">
+                <notes><![CDATA[écriture de fiche de test et analyse fonctionnelle]]></notes>
+            </task>
+        </task>
+        <task id="26" uid="f264c01707d94529b62f105e4c805353" name="Test matériels d'analyse" color="#cc00cc" meeting="false" start="2025-01-13" duration="15" complete="0" expand="true"/>
+        <task id="34" uid="8c5245248a5646a28f8b4660bfc63bde" name="Revue Conception détaillées" color="#ff0033" meeting="true" start="2025-01-30" duration="0" complete="0" expand="true"/>
+        <task id="21" uid="3f9c3ad9163e44c48d42e29e5a0b566a" name="Présentation mi-parcours" color="#ff0033" meeting="true" start="2025-02-04" duration="0" complete="0" expand="true"/>
+        <task id="7" uid="e5b2e91be33141adaf5345f92af22082" name="Développement" meeting="false" start="2025-01-16" duration="32" complete="0" expand="true">
+            <depend id="10" type="2" difference="0" hardness="Strong"/>
+            <task id="8" uid="b3564c622785462da06f035039ad3b04" name="Développement fonctionnel" color="#ff00ff" meeting="false" start="2025-01-16" duration="25" complete="0" expand="true"/>
+            <task id="30" uid="9de3c83e7aaa40d499d2be5da0681eaf" name="Développement enregistrement trame" color="#ff99ff" meeting="false" start="2025-01-27" duration="10" complete="0" expand="true">
+                <depend id="29" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="29" uid="99e3feb2e2154430b6f840935b0d98b6" name="Algorithme analyse trame" color="#ff99ff" meeting="false" start="2025-03-10" duration="5" complete="0" expand="true"/>
+            <task id="35" uid="6be9637be2544c2ba7e17e01d09ecec1" name="Revue Réalisation" color="#ff0033" meeting="true" start="2025-03-19" duration="0" complete="0" expand="true"/>
+            <task id="9" uid="71e791cab99143b69c3035e16da06282" name="Développement de l'interface" color="#cc0066" meeting="false" start="2025-03-10" duration="15" complete="0" expand="true"/>
+        </task>
+        <task id="10" uid="198e38235d204a249dac789b83977d72" name="Tests unitaires" meeting="false" start="2025-03-31" duration="5" complete="0" expand="true">
+            <depend id="13" type="2" difference="0" hardness="Strong"/>
+            <task id="11" uid="5506953c252b4970a8c08d2df96a7a55" name="Matériel" color="#999900" meeting="false" start="2025-03-31" duration="5" complete="0" expand="true"/>
+            <task id="12" uid="c4e45860632243a7b18677f76a78673f" name="Logiciel" color="#669900" meeting="false" start="2025-03-31" duration="5" complete="0" expand="true"/>
+            <task id="36" uid="4fa1e89525f7488f8c2a16899e278d66" name="Revue Tests unitaires" color="#ff0033" meeting="true" start="2025-04-04" duration="0" complete="0" expand="true"/>
+        </task>
+        <task id="13" uid="4e7feea8c4bd4a11b9ed45128b6640b2" name="Test d'intégration" color="#ffff00" meeting="false" start="2025-05-05" duration="10" complete="0" expand="true">
+            <depend id="14" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="14" uid="47ca3156370442c2bede8c3e15499ded" name="Validation" color="#99ff00" meeting="false" start="2025-05-19" duration="3" complete="0" expand="true">
+            <depend id="15" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="37" uid="747001b44138453cbdf0676a6f79b05a" name="Revue Validation" color="#ff0033" meeting="true" start="2025-05-21" duration="0" complete="0" expand="true"/>
+        <task id="15" uid="3c54f380d20d4f34963f0310f537482a" name="Tests Recettes" color="#00ffcc" meeting="false" start="2025-05-22" duration="2" complete="0" expand="true"/>
+        <task id="22" uid="1f244a076a1c486c95198ffdb2606dd6" name="Présentation finale" color="#ff0033" meeting="true" start="2025-05-19" duration="0" complete="0" expand="true"/>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles>
+        <role id="1" name="Dorian BRISSON"/>
+        <role id="2" name="Amandine LANGLAIS"/>
+        <role id="3" name="Billel AAZZOUZ"/>
+        <role id="4" name="Paul HENRY"/>
+        <role id="5" name="Damien LORIGEON"/>
+    </roles>
+</project>
