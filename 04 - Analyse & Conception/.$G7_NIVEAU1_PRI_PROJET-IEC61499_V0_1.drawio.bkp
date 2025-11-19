@@ -901,7 +901,7 @@
           <mxGeometry x="1840" y="1605" width="150" height="60" as="geometry" />
         </mxCell>
         <mxCell id="R8eYkmWXcrIb7ejH6k74-13" value="Presence_sensor.Vision_sensor&amp;lt;&amp;gt;0" style="text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Helvetica;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1819" y="1680" width="220" height="30" as="geometry" />
+          <mxGeometry x="1826" y="1680" width="220" height="30" as="geometry" />
         </mxCell>
         <mxCell id="R8eYkmWXcrIb7ejH6k74-14" value="X3" style="rounded=1;align=left;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="1748" y="1745" width="70" height="60" as="geometry" />
@@ -1119,7 +1119,7 @@
             <mxRectangle width="117" height="73" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="R8eYkmWXcrIb7ejH6k74-60" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Grafcet niveau 2 : Usine de tri&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+        <mxCell id="R8eYkmWXcrIb7ejH6k74-60" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Grafcet niveau 2 : G7 principal&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="632" y="1270" width="330" height="30" as="geometry" />
         </mxCell>
         <mxCell id="R8eYkmWXcrIb7ejH6k74-61" value="X11" style="rounded=1;align=left;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="1" vertex="1">
@@ -1603,6 +1603,9 @@
               <mxPoint x="1030" y="1580" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="GDmghOozis5T69eJLmwc-1" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Grafcet niveau 2 : G7 de tri&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="430" y="2680" width="330" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
