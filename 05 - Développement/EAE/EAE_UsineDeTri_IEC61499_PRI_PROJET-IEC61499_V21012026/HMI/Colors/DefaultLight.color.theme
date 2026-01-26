@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Colors xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/Colors.xsd">
+  <Normal Name="CanvasBackColor" R="230" G="230" B="230" Description="Couleur d'arrière-plan du canvas" />
+  <Normal Name="GroupBoxBackColor" R="200" G="200" B="200" Description="Définit la couleur d'arrière-plan par défaut pour la zone de groupe" />
+  <Normal Name="TextBoxBackColor" R="255" G="255" B="255" Description="Définit la couleur d'arrière-plan par défaut pour la zone de texte" />
+  <Normal Name="TextBoxPenColor" R="200" G="200" B="200" Description="Couleur du stylo pour la zone de texte" />
+  <Normal Name="TrackerScaleColor" R="150" G="150" B="150" Description="Couleur des coches sur l'échelle du traqueur" />
+  <Normal Name="TrackerTextColor" R="130" G="130" B="130" Description="Couleur du texte dans le traqueur" />
+  <Normal Name="TrackerValueColor" R="0" G="168" B="231" Description="Couleur de la valeur pour le contrôle traqueur" />
+  <Normal Name="ButtonInnerBorderColor" R="90" G="90" B="90" Description="Couleur de la bordure intérieure du bouton" />
+  <Normal Name="LabelTextColor" R="100" G="100" B="100" Description="Couleur du texte dans l'étiquette" />
+  <Normal Name="TrackerLineBackColor" R="200" G="200" B="200" Description="Définit la couleur d'arrière-plan par défaut pour la barre du traqueur" />
+  <Normal Name="TrackerScaleDisabledColor" R="180" G="180" B="180" Description="Indique l'état désactivé des coches sur l'échelle du traqueur" />
+  <Normal Name="TrackerTextDisabledColor" R="180" G="180" B="180" Description="Indique l'état désactivé du texte du traqueur" />
+  <Normal Name="TrackerValueDisabledColor" R="180" G="180" B="180" Description="Indique l'état désactivé de la valeur du traqueur" />
+  <Normal Name="ButtonTextColor" R="255" G="255" B="255" Description="Couleur du texte dans le bouton" />
+  <Normal Name="TextBoxTextColor" R="90" G="90" B="90" Description="Couleur du texte dans la zone de texte" />
+  <Normal Name="CheckBoxTextColor" R="70" G="70" B="70" Description="Couleur du texte dans la case à cocher" />
+  <Normal Name="CheckBoxTextDisabledColor" R="180" G="180" B="180" Description="Définit la couleur du texte à afficher lorsque la case à cocher est désactivée" />
+  <Normal Name="TextBoxTextDisabledColor" R="180" G="180" B="180" Description="Définit la couleur de texte par défaut à afficher lorsque la zone de texte est désactivée" />
+  <Normal Name="ButtonPenColor" R="110" G="110" B="110" Description="Couleur du stylo du bouton" />
+  <Normal Name="ButtonTextColorFalse" R="255" G="255" B="255" Description="Définit la couleur par défaut du texte lorsque la valeur est Faux" />
+  <Normal Name="ButtonTextDisabledColor" R="160" G="160" B="160" Description="Définit la couleur du texte à afficher lorsque le bouton est désactivé" />
+  <Normal Name="CanvasTopologyButtonTextColor" R="150" G="150" B="150" Description="Définit la couleur par défaut du texte du bouton dans la topologie du canvas" />
+  <Normal Name="ComboBoxArrowColor" R="110" G="110" B="110" Description="Couleur de la flèche dans le bouton fléché de la zone de liste déroulante" />
+  <Normal Name="ComboBoxArrowDisabledColor" R="180" G="180" B="180" Description="Indique l'état désactivé de la flèche de la zone de liste déroulante" />
+  <Normal Name="ComboBoxPenColor" R="200" G="200" B="200" Description="Couleur du stylo pour la zone de liste déroulante" />
+  <Normal Name="ComboBoxTextColor" R="90" G="90" B="90" Description="Couleur du texte dans la zone de liste déroulante" />
+  <Normal Name="ComboBoxTextDisabledColor" R="180" G="180" B="180" Description="Définit la couleur du texte à afficher lorsque la zone de liste déroulante est désactivée" />
+  <Normal Name="FaceplateBackColor" R="230" G="230" B="230" Description="Définit la couleur d'arrière-plan par défaut pour la faceplate" />
+  <Normal Name="LabelPenColor" R="220" G="220" B="220" Description="Couleur du stylo pour l'étiquette" />
+  <Normal Name="LabelBackColor" R="240" G="240" B="240" Description="Définit la couleur d'arrière-plan par défaut pour l'étiquette" />
+  <Normal Name="ButtonTextColorTrue" R="255" G="255" B="255" Description="Définit la couleur par défaut du texte lorsque la valeur est Vrai" />
+  <Normal Name="ButtonTextColorMouseDown" R="255" G="255" B="255" Description="Définit la couleur du bouton lors d'un clic de la souris" />
+  <Normal Name="CanvasTopologyButtonCurrentTextColor" R="255" G="255" B="255" Description="Couleur par défaut du texte du bouton de topologie du canvas" />
+  <Normal Name="FpStyleRectangularHeader3DLineBright" R="200" G="200" B="200" Description="Séparateur vertical d'en-tête de cadre de faceplate rectangulaire de couleur noire" />
+  <Normal Name="FpStyleRectangularHeader3DLineDark" R="150" G="150" B="150" Description="Séparateur vertical d'en-tête de cadre de faceplate rectangulaire de couleur noir foncé" />
+  <Normal Name="FpStyleRectangularWindowInnerBorder" R="150" G="150" B="150" Description="Bordure intérieure de la fenêtre de cadre de faceplate rectangulaire avec la couleur Blanc" />
+  <Normal Name="FpStyleRectangularWindowOuterBorder" R="130" G="130" B="130" Description="Bordure extérieure de la fenêtre de cadre de faceplate rectangulaire avec la couleur Noir" />
+  <Normal Name="RoundKnobInnerCircleColor" R="0" G="168" B="231" Description="Couleur du cercle intérieur du sélecteur rotatif" />
+  <Normal Name="RoundKnobInnerCircleDisabledColor" R="180" G="180" B="180" Description="Indique l'état désactivé du cercle intérieur du sélecteur rotatif" />
+  <Normal Name="RoundKnobKnobColor" R="210" G="210" B="210" Description="Couleur du bouton dans le sélecteur rotatif" />
+  <Normal Name="RoundKnobNeedleColor" R="110" G="110" B="110" Description="Couleur de l'aiguille du sélecteur rotatif" />
+  <Normal Name="RoundKnobScaleColor" R="130" G="130" B="130" Description="Couleur de l'échelle du sélecteur rotatif" />
+  <Normal Name="RoundKnobScaleDisabledColor" R="180" G="180" B="180" Description="Indique l'état désactivé de l'échelle du sélecteur rotatif" />
+  <Normal Name="RoundKnobTextColor" R="60" G="60" B="60" Description="Couleur du texte dans le sélecteur rotatif" />
+  <Normal Name="RoundKnobTextDisabledColor" R="180" G="180" B="180" Description="Indique l'état désactivé du texte dans le sélecteur rotatif" />
+  <Normal Name="ComboBoxBackColor" R="255" G="255" B="255" Description="Définit la couleur d'arrière-plan par défaut pour la zone de liste déroulante" />
+  <Normal Name="CanvasTopologyButtonColor" R="110" G="110" B="110" Description="Couleur du bouton du toposélecteur" />
+  <Normal Name="FpStyleRectangularHeaderBackground" R="150" G="150" B="150" Description="Arrière-plan de l'en-tête de la fenêtre de cadre de faceplate rectangulaire avec la couleur Noir" />
+  <Normal Name="FpStyleRectangularLineClose" R="100" G="100" B="100" Description="Indique la couleur du bouton de fermeture de la faceplate" />
+  <Normal Name="FpStyleRectangularTitle" R="100" G="100" B="100" Description="Texte du titre de la fenêtre de cadre de faceplate rectangulaire avec la couleur Blanc" />
+  <Normal Name="FpStyleRoundTitle" R="100" G="100" B="100" Description="Texte du titre du cadre de faceplate arrondi avec la couleur Blanc" />
+  <Normal Name="FpStyleRoundWindowBorder" R="140" G="140" B="140" Description="Bordure de la fenêtre de cadre de faceplate arrondi avec la couleur Blanc" />
+  <Normal Name="FpStyleRectangularHeaderLine1" R="140" G="140" B="140" Description="Séparateur d'en-tête de cadre de faceplate rectangulaire de couleur noire"/>
+  <Normal Name="FpStyleRectangularHeaderLine2" R="230" G="230" B="230" Description="Séparateur d'en-tête de cadre de faceplate rectangulaire de couleur grise" />
+  <Normal Name="FpStyleRectangularWindowBackground" R="230" G="230" B="230" Description="Arrière-plan de la fenêtre de cadre de faceplate rectangulaire avec la couleur Gris" />
+  <Normal Name="FpStyleRoundHeaderBackground" R="140" G="140" B="140" Description="Arrière-plan de l'en-tête du cadre de faceplate arrondi avec la couleur Noir" />
+  <Normal Name="FpStyleRoundWindowBackground" R="230" G="230" B="230" Description="Définit la couleur de la fenêtre d'arrière-plan pour la faceplate arrondie" />
+  <Normal Name="FpStyleRoundHeaderLine" R="114" G="114" B="114" Description="Séparateur d'en-tête de cadre de faceplate arrondi avec la couleur Gris"/>
+  <Normal Name="TrendAxisLabelColor" R="120" G="120" B="120" Description="Couleur de l'étiquette de l'axe de tendance" />
+  <Normal Name="TrendAxisTickColor" R="120" G="120" B="120" Description="Couleur de la coche sur l'axe de tendance" />
+  <Normal Name="TrendBackColor" R="220" G="220" B="220" Description="Couleur d'arrière-plan de la tendance" />
+  <Normal Name="TrendGridColor" R="220" G="220" B="220" Description="Couleur de la grille dans le contrôle de tendance"/>
+  <Normal Name="TrendLegendColor" R="120" G="120" B="120" Description="Couleur de la légende de la tendance "/>
+  <Normal Name="TrendLegendFontColor" R="120" G="120" B="120" Description="Définit la couleur de la police de caractères pour la légende de tendance"/>
+  <Normal Name="LedFrameColor" R="200" G="200" B="200" Description="Définit la couleur par défaut du cadre du voyant" />
+  <Normal Name="LedFalseColor" R="60" G="60" B="60" Description="Indique l'état Faux du voyant" />
+  <Normal Name="LedDefaultColor" R="200" G="200" B="200" Description="Couleur par défaut du voyant" />
+  <Normal Name="LedBackColor" R="150" G="150" B="150" Description="Définit la couleur par défaut du voyant" />
+  <Normal Name="LedTrueColor" R="0" G="168" B="231" Description="Indique l'état Vrai du voyant"/>
+  <Normal Name="TrendAxisColor" R="180" G="180" B="180" Description="Couleur de l'axe de tendance" />
+  <Normal Name="FpStyleRoundLineClose" R="100" G="100" B="100" Description="Ligne du bouton de fermeture du cadre de faceplate arrondi avec la couleur Blanc" />
+  <Normal Name="ActiveHelpButton" R="100" G="100" B="100" Description="Indique l'état actif du bouton d'aide"/>
+  <Normal Name="InactiveHelpButton" R="128" G="128" B="128" Description="Indique l'état inactif du bouton d'aide" />
+  <Normal Name="RuntimeConnectionNotConnected" R="255" G="255" B="255" A="255" Description="Définit la couleur qui représente une connexion non opérationnelle entre l'IHM et l'équipement" />
+  <Normal Name="RuntimeConnectionConnected" R="70" G="70" B="70" A="255" Description="Définit la couleur qui représente la connexion opérationnelle entre l'IHM et l'équipement" />
+</Colors>

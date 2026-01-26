@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<baseline xmlns:xsd="http://www.nxtControl.com/Snapshot" xmlns="http://tempuri.org/XMLSchema1.xsd">
+  <deployment>
+    <network_profile name="(Local Test)">
+      <device id="1f57b87a-52a6-47c9-9509-d7b4e1173fed" CompileTime="2026-01-21 21:28:08Z">
+        <sref snapshot="{8C1CACB0-FAB6-43A0-B1D9-9BB497303818}" state="ACTIVE" />
+      </device>
+    </network_profile>
+  </deployment>
+</baseline>

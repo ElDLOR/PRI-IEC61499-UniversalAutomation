@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SymbLinks xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Symblink SymblinkName="FactoryIO.RES0.WriteInCoil_NAME2" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.WriteInCoil_NAME3" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.WriteInCoil_NAME4" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.WriteInCoil_NAME5" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.WriteInCoil_NAME6" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.WriteInCoil_NAME7" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.WriteInCoil_NAME8" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.WriteInCoil_NAME9" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.WriteInCoil_NAME10" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.WriteInCoil_NAME11" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.WriteInCoil_NAME12" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.WriteInCoil_NAME13" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.WriteInCoil_NAME14" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.WriteInCoil_NAME15" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.Entry_conveyor" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.Stop_Blade" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.Exit_conveyor" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.Sorter_1_turn" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.Sorter_1_belt" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.Sorter_2_turn" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.Sorter_2_belt" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.Sorter_3_turn" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.Sorter_3_belt" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.Start_light" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.Reset_light" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.Stop_light" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.Counter_1" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.Counter_2" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.Counter_3" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.At_exit" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.start" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.Auto" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.Reset" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.Stop" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.AU" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.FactoryIO_Run" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.PresenceSensor" IsExposed="true" IOConnected="" />
+  <Symblink SymblinkName="FactoryIO.RES0.Vision_Sensor" IsExposed="true" IOConnected="" />
+</SymbLinks>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="88B0C721AD29AD4B" Name="RES0" Type="EMB_RES_ECO" Namespace="Runtime.Management" xmlns="https://www.se.com/LibraryElements">
+  <FBNetwork>
+    <FB ID="3E030C9E274098EE" Name="FB1" Type="DPAC_FULLINIT" Namespace="SE.DPAC" x="1060" y="180" Loaded="true" />
+    <FB ID="CBC4EF5E5F5CFDEC" Name="Sorter1" Type="EQUIP_Sorter" Namespace="Main" Mapping="377E6E0541B849FF" x="5220" y="280">
+      <Parameter Name="My_ID" Value="1" />
+      <Parameter Name="TurnPath" Value="'Sorter_1_turn'" />
+      <Parameter Name="BeltPath" Value="'Sorter_1_belt'" />
+      <Parameter Name="QI" Value="TRUE" />
+    </FB>
+    <FB ID="130CADB7488143B2" Name="Sorter2" Type="EQUIP_Sorter" Namespace="Main" Mapping="E7D5F0E966E70684" x="5220" y="1160">
+      <Parameter Name="My_ID" Value="2" />
+      <Parameter Name="BeltPath" Value="'Sorter_2_belt'" />
+      <Parameter Name="TurnPath" Value="'Sorter_2_turn'" />
+      <Parameter Name="QI" Value="TRUE" />
+    </FB>
+    <FB ID="32F897FE7AB7761F" Name="Sorter3" Type="EQUIP_Sorter" Namespace="Main" Mapping="FD179A4A654721F9" x="5240" y="2020">
+      <Parameter Name="My_ID" Value="3" />
+      <Parameter Name="TurnPath" Value="'Sorter_3_turn'" />
+      <Parameter Name="BeltPath" Value="'Sorter_3_belt'" />
+      <Parameter Name="QI" Value="TRUE" />
+    </FB>
+    <FB ID="9E7DF1BD71F7138F" Name="TriManager" Type="EQUIP_TRIManager" Namespace="Main" Mapping="32200A64B80B8A74" x="3020" y="820">
+      <Parameter Name="QI" Value="TRUE" />
+    </FB>
+    <FB ID="7736A8546AA944C" Name="ExitConv" Type="EQUIP_ExitConveyor" Namespace="Main" Mapping="AACEF98460FC86D0" x="2040" y="2220">
+      <Parameter Name="QI" Value="TRUE" />
+    </FB>
+    <FB ID="C34152D58763523" Name="Vision" Type="EQUIP_VisionSensor" Namespace="Main" Mapping="66BD5C5935C187F5" x="1900" y="1100">
+      <Parameter Name="QI" Value="TRUE" />
+    </FB>
+    <FB ID="4681CFACAD5C8F98" Name="EntryConv" Type="EQUIP_EntryConveyor" Namespace="Main" Mapping="9EB92CE747466206" x="720" y="1100">
+      <Parameter Name="QI" Value="TRUE" />
+    </FB>
+    <EventConnections>
+      <Connection Source="START.COLD" Destination="FB1.INIT" dx1="158.6041">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="START.WARM" Destination="FB1.INIT" dx1="68.60419" />
+      <Connection Source="START.ONLINECHANGE" Destination="FB1.OC_RETRIGGER" dx1="90" />
+      <Connection Source="EntryConv.INITO" Destination="Vision.INIT" />
+      <Connection Source="Vision.INITO" Destination="TriManager.INIT" dx1="54.66675" />
+      <Connection Source="TriManager.INITO" Destination="ExitConv.INIT" dx1="181.5417" dx2="120" dy="1980">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="ExitConv.INITO" Destination="Sorter1.INIT" dx1="41.54199">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="Sorter1.INITO" Destination="Sorter2.INIT" dx1="83.271" dx2="40" dy="780">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="Sorter2.INITO" Destination="Sorter3.INIT" dx1="103.271" dx2="50" dy="740">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="EntryConv.PIECE_PRESENTE" Destination="Vision.PIECE_PRESENTE" />
+      <Connection Source="ExitConv.PIECE_SORTIE" Destination="TriManager.PIECE_SORTIE" dx1="141.542">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="FB1.INITO" Destination="EntryConv.INIT" dx1="40" dx2="50" dy="350" />
+      <Connection Source="EntryConv.CNF" Destination="Vision.REQ" />
+      <Connection Source="Vision.CNF" Destination="TriManager.REQ" dx1="104.6667">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="TriManager.CNF" Destination="ExitConv.REQ" dx1="140" dx2="70" dy="1880">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="ExitConv.CNF" Destination="Sorter1.REQ" dx1="81.54199">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="Sorter1.CNF" Destination="Sorter2.REQ" dx1="43.271" dx2="80" dy="680">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="Sorter2.CNF" Destination="Sorter3.REQ" dx1="63.271" dx2="100" dy="620">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="TriManager.BLOCK" Destination="EntryConv.BLOCK" dx1="61.54175" dx2="120" dy="-230">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="TriManager.UNBLOCK" Destination="EntryConv.UNBLOCK" dx1="101.5417" dx2="200" dy="-340">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="EntryConv.AU_OUT" Destination="TriManager.AU">
+        <Attribute Name="Configuration.Connections.CrossReference" Value="True" />
+      </Connection>
+      <Connection Source="EntryConv.RESET_OUT" Destination="TriManager.RESET" dx1="130">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="EntryConv.AU_OUT" Destination="Sorter3.AU">
+        <Attribute Name="Configuration.Connections.CrossReference" Value="True" />
+      </Connection>
+      <Connection Source="EntryConv.AU_OUT" Destination="Sorter2.AU">
+        <Attribute Name="Configuration.Connections.CrossReference" Value="True" />
+      </Connection>
+      <Connection Source="EntryConv.AU_OUT" Destination="Sorter1.AU" dx1="3012.167">
+        <Attribute Name="Configuration.Connections.CrossReference" Value="True" />
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+    </EventConnections>
+    <DataConnections>
+      <Connection Source="TriManager.Exit_conveyor" Destination="ExitConv.Exit_conveyor" dx1="81.54175" dx2="20" dy="1320">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="TriManager.Sorter_Actif" Destination="Sorter1.Sorter_Actif" dx1="821.5417">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="TriManager.Sorter_Actif" Destination="Sorter2.Sorter_Actif" dx1="821.5417">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="TriManager.Sorter_Actif" Destination="Sorter3.Sorter_Actif" dx1="821.5417">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="ExitConv.At_exit_Value" Destination="TriManager.At_exit" dx1="181.542">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+    </DataConnections>
+    <AdapterConnections>
+      <Connection Source="TriManager.CouleurIn" Destination="Vision.CouleurOut" dx1="41.54175" dx2="30" dy="90">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+    </AdapterConnections>
+  </FBNetwork>
+</Resource>

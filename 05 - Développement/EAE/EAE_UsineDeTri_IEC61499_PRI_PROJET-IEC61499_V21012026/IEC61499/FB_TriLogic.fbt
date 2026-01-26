@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FBType SYSTEM "../LibraryElement.dtd">
+<FBType GUID="3c97968d-5380-4629-9fd5-a74e28390f3d" Name="FB_TriLogic" Comment="Logique de tri - BLOCK seulement si couleur differente" Namespace="Main">
+  <Identification Standard="61499-2" />
+  <VersionInfo Organization="Schneider Electric" Version="2.0" Author="Claude" Date="20/01/2026" Remarks="Block seulement si changement de couleur" />
+  <InterfaceList>
+    <EventInputs>
+      <Event Name="INIT" Comment="Initialization Request">
+        <With Var="QI" />
+      </Event>
+      <Event Name="NEW_COLOR" Comment="Nouvelle couleur detectee">
+        <With Var="Couleur" />
+        <With Var="Changement" />
+      </Event>
+      <Event Name="REQ" Comment="Cyclic update">
+        <With Var="At_exit" />
+      </Event>
+      <Event Name="PIECE_SORTIE" Comment="Piece a quitte le systeme (front descendant At_exit)" />
+      <Event Name="RESET" Comment="Reset compteurs" />
+      <Event Name="AU" Comment="Arret urgence" />
+    </EventInputs>
+    <EventOutputs>
+      <Event Name="INITO" Comment="Initialization Confirm">
+        <With Var="QO" />
+      </Event>
+      <Event Name="CNF" Comment="Execution Confirmation">
+        <With Var="QO" />
+        <With Var="Sorter_Actif" />
+        <With Var="Exit_conveyor" />
+        <With Var="Counter_1" />
+        <With Var="Counter_2" />
+        <With Var="Counter_3" />
+      </Event>
+      <Event Name="BLOCK" Comment="Bloquer entree (couleur differente)" />
+      <Event Name="UNBLOCK" Comment="Debloquer entree" />
+    </EventOutputs>
+    <InputVars>
+      <VarDeclaration Name="QI" Type="BOOL" Comment="Input event qualifier" />
+      <VarDeclaration Name="Couleur" Type="INT" Comment="1=Bleu, 2=Vert, 3=Gris" />
+      <VarDeclaration Name="Changement" Type="BOOL" Comment="TRUE si couleur differente" />
+      <VarDeclaration Name="At_exit" Type="BOOL" Comment="Capteur sortie" />
+    </InputVars>
+    <OutputVars>
+      <VarDeclaration Name="QO" Type="BOOL" Comment="Output event qualifier" />
+      <VarDeclaration Name="Sorter_Actif" Type="INT" Comment="Sorter actif (1-3)" />
+      <VarDeclaration Name="Exit_conveyor" Type="BOOL" Comment="Convoyeur sortie actif" />
+      <VarDeclaration Name="Counter_1" Type="INT" Comment="Compteur bleu" />
+      <VarDeclaration Name="Counter_2" Type="INT" Comment="Compteur vert" />
+      <VarDeclaration Name="Counter_3" Type="INT" Comment="Compteur gris" />
+    </OutputVars>
+  </InterfaceList>
+  <BasicFB>
+    <Attribute Name="FBType.Basic.Algorithm.Order" Value="ACT_INIT,ACT_START,ACT_SAME_COLOR,ACT_DIFF_COLOR,ACT_WAIT,ACT_COUNT,ACT_SWITCH,ACT_AU,ACT_RESET" />
+    <InternalVars>
+      <VarDeclaration Name="Couleur_EnCours" Type="INT" Comment="Couleur piece en cours de tri" />
+      <VarDeclaration Name="Couleur_Suivante" Type="INT" Comment="Couleur piece suivante (si differente)" />
+      <VarDeclaration Name="Is_Blocked" Type="BOOL" Comment="TRUE si entree bloquee" />
+    </InternalVars>
+    <ECC>
+      <ECState Name="START" Comment="Initial State" x="200" y="400" />
+      <ECState Name="INIT" Comment="Initialization" x="600" y="200">
+        <ECAction Algorithm="ACT_INIT" Output="INITO" />
+      </ECState>
+      <ECState Name="IDLEE" Comment="En attente - pas de piece" x="908" y="863.9999">
+        <ECAction Output="CNF" />
+      </ECState>
+      <ECState Name="FIRST_PIECE" Comment="Premiere piece - activer sorter" x="1932" y="392">
+        <ECAction Algorithm="ACT_START" Output="CNF" />
+      </ECState>
+      <ECState Name="SORTING" Comment="Tri en cours" x="1716" y="933.4578">
+        <ECAction Output="CNF" />
+      </ECState>
+      <ECState Name="SAME_COLOR" Comment="Meme couleur - pas de blocage" x="2604" y="683.9999">
+        <ECAction Algorithm="ACT_SAME_COLOR" Output="CNF" />
+      </ECState>
+      <ECState Name="DIFF_COLOR" Comment="Couleur differente - BLOCK" x="2512" y="1256">
+        <ECAction Algorithm="ACT_DIFF_COLOR" Output="CNF" />
+        <ECAction Output="BLOCK" />
+      </ECState>
+      <ECState Name="WAIT_EXIT" Comment="Attendre sortie piece" x="2532" y="1718.182">
+        <ECAction Algorithm="ACT_WAIT" Output="CNF" />
+      </ECState>
+      <ECState Name="COUNT" Comment="Piece sortie - compter" x="1396" y="1992">
+        <ECAction Algorithm="ACT_COUNT" Output="CNF" />
+      </ECState>
+      <ECState Name="SWITCH" Comment="Changer sorter - UNBLOCK" x="620" y="2164">
+        <ECAction Algorithm="ACT_SWITCH" Output="CNF" />
+        <ECAction Output="UNBLOCK" />
+      </ECState>
+      <ECState Name="AU_STATE" Comment="Arret urgence" x="196" y="1480">
+        <ECAction Algorithm="ACT_AU" Output="CNF" />
+      </ECState>
+      <ECState Name="RESET_STATE" Comment="Reset" x="400" y="600">
+        <ECAction Algorithm="ACT_RESET" Output="CNF" />
+      </ECState>
+      <ECTransition Source="START" Destination="INIT" Condition="INIT" x="398.9885" y="214.7895" />
+      <ECTransition Source="INIT" Destination="IDLEE" Condition="1" x="828.2539" y="500.4407">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="200.3627,99.1621,221.9952,145.7984" />
+      </ECTransition>
+      <ECTransition Source="IDLEE" Destination="FIRST_PIECE" Condition="NEW_COLOR AND Couleur &gt; 0" x="1343.38" y="589.7002">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="302.5554,159.0012,366.6765,129.4656" />
+      </ECTransition>
+      <ECTransition Source="FIRST_PIECE" Destination="SORTING" Condition="1" x="1853.057" y="742.2421">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="472.5222,172.9061,454.0971,211.4671" />
+      </ECTransition>
+      <ECTransition Source="SORTING" Destination="SAME_COLOR" Condition="NEW_COLOR AND NOT Changement AND Couleur &gt; 0" x="2077.601" y="751.4155">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="494.2929,192.119,542.7128,177.2592" />
+      </ECTransition>
+      <ECTransition Source="SORTING" Destination="DIFF_COLOR" Condition="NEW_COLOR AND Changement AND Couleur &gt; 0" x="2162.208" y="1014.383">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="514.7762,238.2296,565.6475,259.1309" />
+      </ECTransition>
+      <ECTransition Source="SAME_COLOR" Destination="SORTING" Condition="1" x="2201.975" y="870.5591">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="576.5638,213.1352,525.4029,228.7353" />
+      </ECTransition>
+      <ECTransition Source="DIFF_COLOR" Destination="WAIT_EXIT" Condition="1" x="2587.541" y="1506.622">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="650.9457,362.4632,649.6468,394.1031" />
+      </ECTransition>
+      <ECTransition Source="WAIT_EXIT" Destination="COUNT" Condition="PIECE_SORTIE" x="2119.331" y="1862.702">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="577.6678,454.5807,506.0965,475.3348" />
+      </ECTransition>
+      <ECTransition Source="SORTING" Destination="COUNT" Condition="PIECE_SORTIE AND NOT Is_Blocked" x="1483.058" y="1452.723">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="377.6027,322.4586,353.9951,402.2349" />
+      </ECTransition>
+      <ECTransition Source="COUNT" Destination="SWITCH" Condition="Is_Blocked" x="1122.65" y="2122.836">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="307.9316,526.9131,266.4142,537.9637" />
+      </ECTransition>
+      <ECTransition Source="COUNT" Destination="SORTING" Condition="NOT Is_Blocked AND Couleur_EnCours &gt; 0" x="1568.329" y="1351.751">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="381.3094,368.4756,405.5597,288.9037" />
+      </ECTransition>
+      <ECTransition Source="COUNT" Destination="IDLEE" Condition="NOT Is_Blocked AND Couleur_EnCours = 0" x="1160.01" y="1510.916">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="309.5973,427.287,272.592,341.9901" />
+      </ECTransition>
+      <ECTransition Source="SWITCH" Destination="SORTING" Condition="Couleur_EnCours &gt; 0" x="1229.88" y="1407.855">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="269.6671,387.9915,357.4918,292.4572" />
+      </ECTransition>
+      <ECTransition Source="SWITCH" Destination="IDLEE" Condition="Couleur_EnCours = 0" x="775.3121" y="1380.847">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="183.9066,383.9781,206.1619,284.2536" />
+      </ECTransition>
+      <ECTransition Source="IDLEE" Destination="AU_STATE" Condition="AU" x="632.2437" y="1223.995">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="184.7449,289.0485,137.1777,331.6147" />
+      </ECTransition>
+      <ECTransition Source="SORTING" Destination="AU_STATE" Condition="AU" x="981.4341" y="1281.542">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="296.1508,307.1543,191.6297,344.4033" />
+      </ECTransition>
+      <ECTransition Source="WAIT_EXIT" Destination="AU_STATE" Condition="AU" x="1407.298" y="1680.115">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="434.4374,432.8827,276.673,417.3062" />
+      </ECTransition>
+      <ECTransition Source="AU_STATE" Destination="RESET_STATE" Condition="RESET" x="307.6934" y="935.7244">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="70.48492,257.5672,85.57307,192.9158" />
+      </ECTransition>
+      <ECTransition Source="RESET_STATE" Destination="INIT" Condition="1" x="496.5144" y="325" />
+      <ECTransition Source="INIT" Destination="AU_STATE" Condition="AU" x="470.4349" y="863.3688">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="138.1055,168.7986,107.1331,266.7806" />
+      </ECTransition>
+    </ECC>
+    <Algorithm Name="ACT_INIT" Comment="Initialization">
+      <ST><![CDATA[QO := TRUE;
+Sorter_Actif := 0;
+Exit_conveyor := FALSE;
+Couleur_EnCours := 0;
+Couleur_Suivante := 0;
+Is_Blocked := FALSE;
+Counter_1 := 0;
+Counter_2 := 0;
+Counter_3 := 0;]]></ST>
+    </Algorithm>
+    <Algorithm Name="ACT_START" Comment="Premiere piece - activer sorter">
+      <ST><![CDATA[(* Premiere piece detectee - activer le sorter *)
+Couleur_EnCours := Couleur;
+Sorter_Actif := Couleur;
+Exit_conveyor := TRUE;
+Is_Blocked := FALSE;]]></ST>
+    </Algorithm>
+    <Algorithm Name="ACT_SAME_COLOR" Comment="Meme couleur - continuer sans bloquer">
+      <ST><![CDATA[(* Meme couleur que precedente - pas de blocage *)
+(* Le sorter est deja bon, on continue *)
+Exit_conveyor := TRUE;]]></ST>
+    </Algorithm>
+    <Algorithm Name="ACT_DIFF_COLOR" Comment="Couleur differente - bloquer et memoriser">
+      <ST><![CDATA[(* Couleur DIFFERENTE - bloquer l'entree et memoriser *)
+Couleur_Suivante := Couleur;
+Is_Blocked := TRUE;
+(* IMPORTANT: garder le sorter actuel jusqu'a ce que la piece sorte *)
+Exit_conveyor := TRUE;]]></ST>
+    </Algorithm>
+    <Algorithm Name="ACT_WAIT" Comment="Attendre sortie piece">
+      <ST><![CDATA[(* Attendre que la piece en cours sorte *)
+(* Garder le sorter actuel actif *)
+Sorter_Actif := Couleur_EnCours;
+Exit_conveyor := TRUE;]]></ST>
+    </Algorithm>
+    <Algorithm Name="ACT_COUNT" Comment="Compter la piece sortie">
+      <ST><![CDATA[(* Piece sortie - incrementer compteur *)
+IF Couleur_EnCours = 1 THEN
+    Counter_1 := Counter_1 + 1;
+ELSIF Couleur_EnCours = 2 THEN
+    Counter_2 := Counter_2 + 1;
+ELSIF Couleur_EnCours = 3 THEN
+    Counter_3 := Counter_3 + 1;
+END_IF;
+
+(* Preparer pour la suite *)
+IF Is_Blocked THEN
+    (* On va changer de couleur *)
+    Couleur_EnCours := Couleur_Suivante;
+ELSE
+    (* Pas de piece en attente - on garde la meme couleur active *)
+    (* Couleur_EnCours reste inchange *)
+   Couleur_EnCours := Couleur;
+END_IF;]]></ST>
+    </Algorithm>
+    <Algorithm Name="ACT_SWITCH" Comment="Changer sorter et debloquer">
+      <ST><![CDATA[(* Changer le sorter pour la nouvelle couleur *)
+Sorter_Actif := Couleur_EnCours;
+Couleur_Suivante := 0;
+Is_Blocked := FALSE;
+Exit_conveyor := TRUE;]]></ST>
+    </Algorithm>
+    <Algorithm Name="ACT_AU" Comment="Arret urgence">
+      <ST><![CDATA[(* Tout arreter *)
+Sorter_Actif := 0;
+Exit_conveyor := FALSE;
+Couleur_EnCours := 0;
+Couleur_Suivante := 0;
+Is_Blocked := FALSE;]]></ST>
+    </Algorithm>
+    <Algorithm Name="ACT_RESET" Comment="Reset complet">
+      <ST><![CDATA[(* Reset compteurs et etats *)
+QO := TRUE;
+Sorter_Actif := 0;
+Exit_conveyor := FALSE;
+Couleur_EnCours := 0;
+Couleur_Suivante := 0;
+Is_Blocked := FALSE;
+Counter_1 := 0;
+Counter_2 := 0;
+Counter_3 := 0;]]></ST>
+    </Algorithm>
+  </BasicFB>
+</FBType>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FBType SYSTEM "../LibraryElement.dtd">
+<FBType GUID="c535e5c4-096d-4c06-b6a0-ba00ca62e955" Name="FB_SorterLogic" Comment="Logique sorter - SIMPLIFIE" Namespace="Main">
+  <Identification Standard="61499-2" />
+  <VersionInfo Organization="Schneider Electric" Version="1.0" Author="Claude" Date="20/01/2026" Remarks="Version simplifiee" />
+  <InterfaceList>
+    <EventInputs>
+      <Event Name="INIT" Comment="Initialization Request">
+        <With Var="QI" />
+        <With Var="My_ID" />
+      </Event>
+      <Event Name="REQ" Comment="Normal Execution Request">
+        <With Var="QI" />
+        <With Var="Sorter_Actif" />
+      </Event>
+      <Event Name="AU" Comment="Arret urgence" />
+    </EventInputs>
+    <EventOutputs>
+      <Event Name="INITO" Comment="Initialization Confirm">
+        <With Var="QO" />
+      </Event>
+      <Event Name="CNF" Comment="Execution Confirmation">
+        <With Var="QO" />
+        <With Var="Turn" />
+        <With Var="Belt" />
+      </Event>
+    </EventOutputs>
+    <InputVars>
+      <VarDeclaration Name="QI" Type="BOOL" Comment="Input event qualifier" />
+      <VarDeclaration Name="Sorter_Actif" Type="INT" Comment="ID du sorter actif" />
+      <VarDeclaration Name="My_ID" Type="INT" Comment="Mon ID (1, 2 ou 3)" />
+    </InputVars>
+    <OutputVars>
+      <VarDeclaration Name="QO" Type="BOOL" Comment="Output event qualifier" />
+      <VarDeclaration Name="Turn" Type="BOOL" Comment="Tourner" />
+      <VarDeclaration Name="Belt" Type="BOOL" Comment="Tapis" />
+    </OutputVars>
+  </InterfaceList>
+  <BasicFB>
+    <Attribute Name="FBType.Basic.Algorithm.Order" Value="ACT_INIT,ACT_UPDATE,ACT_AU" />
+    <ECC>
+      <ECState Name="START" Comment="Initial State" x="200" y="400" />
+      <ECState Name="INIT" Comment="Initialization" x="600" y="200">
+        <ECAction Algorithm="ACT_INIT" Output="INITO" />
+      </ECState>
+      <ECState Name="IDLEE" Comment="En attente" x="1000" y="400" />
+      <ECState Name="UPDATE" Comment="Mise a jour" x="1188" y="956">
+        <ECAction Algorithm="ACT_UPDATE" Output="CNF" />
+      </ECState>
+      <ECState Name="AU_STATE" Comment="Arret urgence" x="200" y="700">
+        <ECAction Algorithm="ACT_AU" Output="CNF" />
+      </ECState>
+      <ECTransition Source="START" Destination="INIT" Condition="INIT" x="398.9885" y="214.7895" />
+      <ECTransition Source="INIT" Destination="IDLEE" Condition="1" x="835.8517" y="223.6164" />
+      <ECTransition Source="IDLEE" Destination="UPDATE" Condition="REQ" x="1172.015" y="653.9764">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="290.8198,142.674,303.5458,180.3103" />
+      </ECTransition>
+      <ECTransition Source="UPDATE" Destination="IDLEE" Condition="1" x="1091.125" y="753">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="279.863,213.3181,267.137,175.6819" />
+      </ECTransition>
+      <ECTransition Source="IDLEE" Destination="AU_STATE" Condition="AU" x="647.9507" y="622.2605" />
+      <ECTransition Source="UPDATE" Destination="AU_STATE" Condition="AU" x="699.1013" y="912.608">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="204.6139,240.0619,149.7689,225.851" />
+      </ECTransition>
+      <ECTransition Source="AU_STATE" Destination="INIT" Condition="INIT" x="391.9553" y="375" />
+    </ECC>
+    <Algorithm Name="ACT_INIT" Comment="Initialization">
+      <ST><![CDATA[QO := TRUE;
+Turn := FALSE;
+Belt := FALSE;]]></ST>
+    </Algorithm>
+    <Algorithm Name="ACT_UPDATE" Comment="Mise a jour sorter">
+      <ST><![CDATA[(* Activer si c'est mon tour *)
+IF Sorter_Actif = My_ID THEN
+    Turn := TRUE;
+    Belt := TRUE;
+ELSE
+    Turn := FALSE;
+    Belt := FALSE;
+END_IF;]]></ST>
+    </Algorithm>
+    <Algorithm Name="ACT_AU" Comment="Arret urgence">
+      <ST><![CDATA[(* Tout arreter *)
+Turn := FALSE;
+Belt := FALSE;]]></ST>
+    </Algorithm>
+  </BasicFB>
+</FBType>

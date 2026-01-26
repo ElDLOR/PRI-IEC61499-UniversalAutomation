@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SystemDatabase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="1.7.0.0" xmlns="http://www.nxtcontrol.com/IEC61499.xsd">
+  <System Name="System" Dir="System">
+    <CATType Name="MODBUSGENTCPS" Namespace="Standard.IoModbus">
+      <ResInst ID="FE6E6C6F0DF556" Name="Res-FactoryIO-RES0-MODBUSGENTCPS" Map="1f57b87a-52a6-47c9-9509-d7b4e1173fed.88B0C721AD29AD4B;" />
+    </CATType>
+    <CATType Name="MODBUSRCOIL8" Namespace="Standard.IoModbus">
+      <ResInst ID="4CEC2C6D0CFDB490" Name="Res-FactoryIO-RES0-MODBUSRCOIL8" Map="1f57b87a-52a6-47c9-9509-d7b4e1173fed.88B0C721AD29AD4B;" />
+    </CATType>
+    <CATType Name="MODBUSRREG1" Namespace="Standard.IoModbus">
+      <ResInst ID="877FB2C015EDA55C" Name="Res-FactoryIO-RES0-MODBUSRREG1" Map="1f57b87a-52a6-47c9-9509-d7b4e1173fed.88B0C721AD29AD4B;" />
+    </CATType>
+    <CATType Name="MODBUSSLAVEND" Namespace="Standard.IoModbus">
+      <ResInst ID="6F48E3E09B4FEE0E" Name="Res-FactoryIO-RES0-MODBUS_END_1" Map="1f57b87a-52a6-47c9-9509-d7b4e1173fed.88B0C721AD29AD4B;" />
+    </CATType>
+    <CATType Name="MODBUSSLOTEND" Namespace="Standard.IoModbus">
+      <ResInst ID="9434EDBB3603C531" Name="Res-FactoryIO-RES0-MODBUSGENTCPS_END_1" Map="1f57b87a-52a6-47c9-9509-d7b4e1173fed.88B0C721AD29AD4B;" />
+    </CATType>
+    <CATType Name="MODBUSWCOIL8" Namespace="Standard.IoModbus">
+      <ResInst ID="AA7274163D2B68F8" Name="Res-FactoryIO-RES0-MODBUSWCOIL8_1" Map="1f57b87a-52a6-47c9-9509-d7b4e1173fed.88B0C721AD29AD4B;" />
+      <ResInst ID="FD20CC53DD80D5F6" Name="Res-FactoryIO-RES0-MODBUSWCOIL8" Map="1f57b87a-52a6-47c9-9509-d7b4e1173fed.88B0C721AD29AD4B;" />
+    </CATType>
+    <CATType Name="MODBUSWREG4" Namespace="Standard.IoModbus">
+      <ResInst ID="8B07BF6AF2BE0FF3" Name="Res-FactoryIO-RES0-MODBUSWREG4" Map="1f57b87a-52a6-47c9-9509-d7b4e1173fed.88B0C721AD29AD4B;" />
+    </CATType>
+    <CATType Name="MODBUS" Namespace="Standard.IoModbus">
+      <ResInst ID="E6C2D10D10E8AF11" Name="Res-FactoryIO-RES0-MODBUS" Map="1f57b87a-52a6-47c9-9509-d7b4e1173fed.88B0C721AD29AD4B;" />
+    </CATType>
+  </System>
+</SystemDatabase>

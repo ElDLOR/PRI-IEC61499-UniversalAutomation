@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FBType SYSTEM "../LibraryElement.dtd">
+<FBType GUID="d7ebf535-e2ff-48ca-8987-15a0477bf79b" Name="FB_VisionSensor" Comment="Capteur vision - detecte changement de couleur" Namespace="Main">
+  <Identification Standard="61499-2" />
+  <VersionInfo Organization="Schneider Electric" Version="2.0" Author="Claude" Date="20/01/2026" Remarks="Detecte si couleur change" />
+  <InterfaceList>
+    <EventInputs>
+      <Event Name="INIT" Comment="Initialization Request">
+        <With Var="QI" />
+      </Event>
+      <Event Name="REQ" Comment="Normal Execution Request">
+        <With Var="QI" />
+        <With Var="Vision_value" />
+      </Event>
+      <Event Name="DETECT" Comment="Piece presente - lire couleur">
+        <With Var="Vision_value" />
+      </Event>
+    </EventInputs>
+    <EventOutputs>
+      <Event Name="INITO" Comment="Initialization Confirm">
+        <With Var="QO" />
+      </Event>
+      <Event Name="CNF" Comment="Execution Confirmation">
+        <With Var="QO" />
+        <With Var="Couleur" />
+        <With Var="Changement" />
+      </Event>
+      <Event Name="NEW_COLOR" Comment="Nouvelle couleur detectee">
+        <With Var="Couleur" />
+        <With Var="Changement" />
+      </Event>
+    </EventOutputs>
+    <InputVars>
+      <VarDeclaration Name="QI" Type="BOOL" Comment="Input event qualifier" />
+      <VarDeclaration Name="Vision_value" Type="INT" Comment="Valeur capteur vision (0-9)" />
+    </InputVars>
+    <OutputVars>
+      <VarDeclaration Name="QO" Type="BOOL" Comment="Output event qualifier" />
+      <VarDeclaration Name="Couleur" Type="INT" Comment="0=Aucune, 1=Bleu, 2=Vert, 3=Gris" />
+      <VarDeclaration Name="Changement" Type="BOOL" Comment="TRUE si couleur differente de la precedente" />
+    </OutputVars>
+  </InterfaceList>
+  <BasicFB>
+    <Attribute Name="FBType.Basic.Algorithm.Order" Value="ACT_INIT,ACT_READ,ACT_DETECT" />
+    <InternalVars>
+      <VarDeclaration Name="Couleur_Precedente" Type="INT" Comment="Couleur de la piece precedente" />
+    </InternalVars>
+    <ECC>
+      <ECState Name="START" Comment="Initial State" x="200" y="400" />
+      <ECState Name="INIT" Comment="Initialization" x="600" y="200">
+        <ECAction Algorithm="ACT_INIT" Output="INITO" />
+      </ECState>
+      <ECState Name="IDLEE" Comment="En attente" x="1000" y="400" />
+      <ECState Name="READ" Comment="Lecture valeur" x="784" y="856">
+        <ECAction Algorithm="ACT_READ" Output="CNF" />
+      </ECState>
+      <ECState Name="DETECTED" Comment="Piece detectee" x="1600" y="400">
+        <ECAction Algorithm="ACT_DETECT" Output="NEW_COLOR" />
+      </ECState>
+      <ECTransition Source="START" Destination="INIT" Condition="INIT" x="398.9885" y="214.7895" />
+      <ECTransition Source="INIT" Destination="IDLEE" Condition="1" x="835.8517" y="223.6164" />
+      <ECTransition Source="IDLEE" Destination="READ" Condition="REQ" x="968.8833" y="660.1065">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="252.5336,153.0507,238.6533,182.3536" />
+      </ECTransition>
+      <ECTransition Source="READ" Destination="IDLEE" Condition="1" x="886.4006" y="553">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="216.0598,146.6515,229.9402,117.3485" />
+      </ECTransition>
+      <ECTransition Source="IDLEE" Destination="DETECTED" Condition="DETECT" x="1270.663" y="311.9544">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="304.3691,75,328.9707,75" />
+      </ECTransition>
+      <ECTransition Source="DETECTED" Destination="IDLEE" Condition="1" x="1270.663" y="488.0456">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="328.9707,125,304.3691,125" />
+      </ECTransition>
+    </ECC>
+    <Algorithm Name="ACT_INIT" Comment="Initialization">
+      <ST><![CDATA[QO := TRUE;
+Couleur := 0;
+Changement := FALSE;
+Couleur_Precedente := 0;]]></ST>
+    </Algorithm>
+    <Algorithm Name="ACT_READ" Comment="Lecture valeur capteur">
+      <ST><![CDATA[(* Convertir Vision_value en Couleur *)
+IF Vision_value > 0 AND Vision_value < 4 THEN
+    Couleur := 1;  (* Bleu *)
+ELSIF Vision_value >= 4 AND Vision_value < 7 THEN
+    Couleur := 2;  (* Vert *)
+ELSIF Vision_value >= 7 THEN
+    Couleur := 3;  (* Gris *)
+ELSE
+    Couleur := 0;  (* Aucune piece *)
+END_IF;]]></ST>
+    </Algorithm>
+    <Algorithm Name="ACT_DETECT" Comment="Piece detectee - comparer avec precedente">
+      <ST><![CDATA[(* Convertir Vision_value en Couleur *)
+IF Vision_value > 0 AND Vision_value < 4 THEN
+    Couleur := 1;  (* Bleu *)
+ELSIF Vision_value >= 4 AND Vision_value < 7 THEN
+    Couleur := 2;  (* Vert *)
+ELSIF Vision_value >= 7 THEN
+    Couleur := 3;  (* Gris *)
+ELSE
+    Couleur := 0;  (* Aucune piece *)
+END_IF;
+
+(* Detecter si la couleur a change *)
+IF Couleur_Precedente <> 0 AND Couleur <> Couleur_Precedente THEN
+    Changement := TRUE;   (* Couleur DIFFERENTE de la precedente *)
+ELSE
+    Changement := FALSE;  (* Meme couleur OU premiere piece *)
+END_IF;
+Couleur_Precedente := Couleur;
+
+]]></ST>
+    </Algorithm>
+  </BasicFB>
+</FBType>

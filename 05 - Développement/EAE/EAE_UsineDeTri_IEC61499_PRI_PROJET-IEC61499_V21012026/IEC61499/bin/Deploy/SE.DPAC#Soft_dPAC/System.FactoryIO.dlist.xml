@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeployFiles CompileTime="2026-01-21 21:49:39Z" Compiler="90E02843-42CC-4C2C-B657-AB6EE7D00471" NetworkProfile="(Local Test)" BaseSnapshotGuid="{00000000-0000-0000-0000-000000000000}" xmlns="http://tempuri.org/DeploySnapshot.xsd">
+  <Deployable>
+    <DeployInformation Type="Working">
+      <FileGroup Name="FileList">
+        <FileItem Name="Basics/SE.DPAC#DS_SELECTX_2536758B411A6CE51.bin" Library="SE.DPAC.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="5dcc80b8-60eb-507a-ed08-d0bd53f22479" />
+        <FileItem Name="Composites/SE.DPAC#DPAC_FULLINIT.bin" Library="SE.DPAC.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="e4db503f-6796-1d8d-2e08-2b25845f9935" />
+        <FileItem Name="Main#FB_SorterLogic.bin" Library="IEC61499.dll" BuildId="0bebdd06-e125-07f3-02be-7a2a091c29f9" />
+        <FileItem Name="Main#SYMLINKMULTIVARSRC_277E97BEC1451D2C.bin" Library="IEC61499.dll" BuildId="ce025b95-1cb4-7634-7134-dd8858290911" />
+        <FileItem Name="Main#EQUIP_Sorter.bin" Library="IEC61499.dll" BuildId="61eeeb80-a034-3c87-730f-3ce0ade2d769" />
+        <FileItem Name="Main#FB_TriLogic.bin" Library="IEC61499.dll" BuildId="b6ee68ad-897c-e6eb-6ec8-4b2a2aca6131" />
+        <FileItem Name="Main#ICouleur.bin" Library="IEC61499.dll" BuildId="cbad3d5c-e170-1737-bafb-e3e8d8626b91" />
+        <FileItem Name="Main#EQUIP_TRIManager.bin" Library="IEC61499.dll" BuildId="73de0c19-590e-4ea7-1bfa-67b5a8e5ebec" />
+        <FileItem Name="Main#SYMLINKMULTIVARDST_1559B0FF8170C9BA0.bin" Library="IEC61499.dll" BuildId="b0613cae-fa5c-1c16-08cc-9e0b30f38c08" />
+        <FileItem Name="Main#SYMLINKMULTIVARSRC_1559B0FF8170C9BA0.bin" Library="IEC61499.dll" BuildId="1c5ec7a3-a6dc-d1df-2bf8-9d7a12cd9def" />
+        <FileItem Name="Main#EQUIP_ExitConveyor.bin" Library="IEC61499.dll" BuildId="6e8ffbd5-c2f7-f465-8654-7372bef6de51" />
+        <FileItem Name="Main#FB_VisionSensor.bin" Library="IEC61499.dll" BuildId="d9fd3b6c-c011-112f-f062-7f1e2cab233e" />
+        <FileItem Name="Main#SYMLINKMULTIVARDST_5A03F112CD5D470.bin" Library="IEC61499.dll" BuildId="b70692d5-78e1-9203-b46e-60a1bc1491d3" />
+        <FileItem Name="Main#EQUIP_VisionSensor.bin" Library="IEC61499.dll" BuildId="d5aec776-8cc0-caee-a1d7-dba899eb404d" />
+        <FileItem Name="Main#FB_EntryLogic.bin" Library="IEC61499.dll" BuildId="eaae65f9-fda3-71b5-9686-d0b4175bb42a" />
+        <FileItem Name="Main#SYMLINKMULTIVARSRC_65D63179E2618F5E.bin" Library="IEC61499.dll" BuildId="de395ce2-9e89-1da4-63a6-411a7c5a0a4e" />
+        <FileItem Name="Main#SYMLINKMULTIVARDST_5495E501E675F500.bin" Library="IEC61499.dll" BuildId="dc2f0fae-5654-ce61-ece0-0b728f9c3b4b" />
+        <FileItem Name="Main#EQUIP_EntryConveyor.bin" Library="IEC61499.dll" BuildId="0be648cf-c3b4-2d43-8b17-7da9fa4f0541" />
+        <FileItem Name="Composites/Standard.IoModbus#MODBUS_HMI.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="9a36b155-58f2-541d-cf47-03ba93780dd6" />
+        <FileItem Name="Basics/Standard.IoModbus#TIME2UDINT.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="bb8a1e71-a452-6faa-0168-4b8395c8f583" />
+        <FileItem Name="Adapters/Standard.IoModbus#IHwSlaveConfig.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="3905d6eb-186b-f8d6-3aaf-e6dd4316641f" />
+        <FileItem Name="Basics/Standard.IoModbus#MUL_2449E3A5F7EE2D347.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="8a666d39-5073-adcb-4cd4-8c859504767e" />
+        <FileItem Name="Composites/Standard.IoModbus#MODBUS.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="160cde20-b2cc-b7bb-39c4-62c8e5bb3bcf" />
+        <FileItem Name="Composites/Standard.IoModbus#MODBUSGENTCPS_HMI.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="7ce41fe0-2d56-11b4-42ad-b16ca2dd92b9" />
+        <FileItem Name="Basics/Standard.IoModbus#ONLINE_OFFLINE_INT.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="16dc8eaa-8d5d-a884-7464-7a7a96990ffd" />
+        <FileItem Name="Basics/Standard.IoModbus#DS_SELECTX_2536758B411A6CE51.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="24700016-dbee-7073-93e4-e96a8f72aae1" />
+        <FileItem Name="Composites/Standard.IoModbus#HW_OCINIT_ACK.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="5e5588e9-27af-0473-78fb-601b34f4ace9" />
+        <FileItem Name="Adapters/Standard.IoModbus#IHwGenSlot.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="879ceee1-f3b4-ed49-1f0a-1914aded41f0" />
+        <FileItem Name="Basics/Standard.IoModbus#ADD_2449E3A5F7EE2D347.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="a15db68e-d830-9574-797d-ca38c28d3277" />
+        <FileItem Name="Basics/Standard.IoModbus#COMPARE_10593E80BE744DDAF.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="baa5f12b-1dcb-8a2f-edef-9f14ed8caa0b" />
+        <FileItem Name="Basics/Standard.IoModbus#SYMLINKMULTIVARSRC_75EA05D83EA26443.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="577609b3-645a-07a0-6de1-c8186c742ce5" />
+        <FileItem Name="Basics/Standard.IoModbus#SYMLINKMULTIVARDST_1559B0FF8170C9BA0.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="e2e47c18-1f3f-6abc-4978-d2dae521a569" />
+        <FileItem Name="Basics/Standard.IoModbus#NOT_42C76073DCEB1A7A.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="1d86ea2c-ef42-cc86-8b87-c666036ce987" />
+        <FileItem Name="Basics/Standard.IoModbus#E_REND_X_148CCC6046D4CE74C.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="0592d9bf-c984-9d74-c3f1-83a66a9e3cef" />
+        <FileItem Name="Composites/Standard.IoModbus#MODBUSGENTCPS.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="88ccc196-b027-8dd0-469e-d7e91e86953c" />
+        <FileItem Name="Composites/Standard.IoModbus#MODBUSRCOIL8_HMI.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="f547ac34-a687-604d-54c8-6281c4a9113e" />
+        <FileItem Name="Basics/Standard.IoModbus#SYMLINKMULTIVARSRC_802772FD4080E26E.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="152a5057-f9fc-f191-2d64-0c9967cf7d0c" />
+        <FileItem Name="Basics/Standard.IoModbus#PD_ANY_IN_17847B0F6BAB60A94.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="3396d230-a27c-820e-17b1-470559153931" />
+        <FileItem Name="Basics/Standard.IoModbus#SYMLINKMULTIVARDST_5A03F112CD5D470.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="a24b9ee7-a60d-8aa7-e830-e36fd330cb10" />
+        <FileItem Name="Basics/Standard.IoModbus#COMPARE_739E3FB559152FE.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="97721e31-9aef-2372-05c8-99577da7c0bc" />
+        <FileItem Name="Composites/Standard.IoModbus#MODBUSRCOIL8.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="50fa0b51-3645-8067-db19-ba6656f2f1ae" />
+        <FileItem Name="Composites/Standard.IoModbus#MODBUSWCOIL8_HMI.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="86d6b519-d055-0a73-c7c7-d2e01e00493c" />
+        <FileItem Name="Composites/Standard.IoModbus#HW_OCINIT.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="d64848e0-4983-57cf-e9ed-250a4b73159c" />
+        <FileItem Name="Basics/Standard.IoModbus#SYMLINKMULTIVARDST_91EC7219ED37E472.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="b7fd0eb4-7af3-917d-453a-e8b30273a788" />
+        <FileItem Name="Basics/Standard.IoModbus#PD_ANY_OUT_1454F48B413EF8B3F.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="72d7fdba-12f1-7b41-5991-da78072950b4" />
+        <FileItem Name="Composites/Standard.IoModbus#MODBUSWCOIL8.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="95724b17-a55a-e4a4-45e2-ff2011c7dba3" />
+        <FileItem Name="Composites/Standard.IoModbus#MODBUSRREG1_HMI.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="2086eb87-2673-ab65-3d71-439c849004f9" />
+        <FileItem Name="Basics/Standard.IoModbus#SYMLINKMULTIVARSRC_18556BCA74EA878F1.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="430c7019-facc-1396-8d08-a5d8b8529644" />
+        <FileItem Name="Basics/Standard.IoModbus#PD_ANY_IN_842F42743DE0B99A.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="5b3c7cef-ed50-418a-0b41-b9f20bbf32de" />
+        <FileItem Name="Composites/Standard.IoModbus#MODBUSRREG1.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="da81ee6b-d25f-67bc-0c2f-ea87c5e3b942" />
+        <FileItem Name="Composites/Standard.IoModbus#MODBUSWREG4_HMI.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="4ad5ddec-e5b9-e25d-d934-c9aebb994701" />
+        <FileItem Name="Basics/Standard.IoModbus#SYMLINKMULTIVARDST_15292F208F22048C1.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="6472d097-02ec-d48a-0769-34fc54200b5d" />
+        <FileItem Name="Basics/Standard.IoModbus#PD_ANY_OUT_26E1DB3412DDAC62.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="910b0099-7c6b-af5a-c0f9-b04b47a7e8ef" />
+        <FileItem Name="Composites/Standard.IoModbus#MODBUSWREG4.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="6487a95d-44b5-72ca-d46d-1f59605391a5" />
+        <FileItem Name="Composites/Standard.IoModbus#MODBUSSLOTEND.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="120089ff-9842-5d3e-231f-7d910d36a9b1" />
+        <FileItem Name="Composites/Standard.IoModbus#MODBUSSLAVEND.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="2dd6a31e-5cea-18b9-4aa1-dd73e6e75a7d" />
+        <DeviceItem ID="1f57b87a-52a6-47c9-9509-d7b4e1173fed" Hash="151A54554E0DEEBE9" AllReferencesHash="78F23D754EEDDFEA79CE389B27D4F6CADAFB2F7B" />
+      </FileGroup>
+      <FileGroup Name="DeployList">
+        <FileItem Name="Basics/SE.DPAC#DS_SELECTX_2536758B411A6CE51.bin" Library="SE.DPAC.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Composites/SE.DPAC#DPAC_FULLINIT.bin" Library="SE.DPAC.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Main#FB_SorterLogic.bin" Library="IEC61499.dll" />
+        <FileItem Name="Main#SYMLINKMULTIVARSRC_277E97BEC1451D2C.bin" Library="IEC61499.dll" />
+        <FileItem Name="Main#EQUIP_Sorter.bin" Library="IEC61499.dll" />
+        <FileItem Name="Main#FB_TriLogic.bin" Library="IEC61499.dll" />
+        <FileItem Name="Main#ICouleur.bin" Library="IEC61499.dll" />
+        <FileItem Name="Main#EQUIP_TRIManager.bin" Library="IEC61499.dll" />
+        <FileItem Name="Main#SYMLINKMULTIVARDST_1559B0FF8170C9BA0.bin" Library="IEC61499.dll" />
+        <FileItem Name="Main#SYMLINKMULTIVARSRC_1559B0FF8170C9BA0.bin" Library="IEC61499.dll" />
+        <FileItem Name="Main#EQUIP_ExitConveyor.bin" Library="IEC61499.dll" />
+        <FileItem Name="Main#FB_VisionSensor.bin" Library="IEC61499.dll" />
+        <FileItem Name="Main#SYMLINKMULTIVARDST_5A03F112CD5D470.bin" Library="IEC61499.dll" />
+        <FileItem Name="Main#EQUIP_VisionSensor.bin" Library="IEC61499.dll" />
+        <FileItem Name="Main#FB_EntryLogic.bin" Library="IEC61499.dll" />
+        <FileItem Name="Main#SYMLINKMULTIVARSRC_65D63179E2618F5E.bin" Library="IEC61499.dll" />
+        <FileItem Name="Main#SYMLINKMULTIVARDST_5495E501E675F500.bin" Library="IEC61499.dll" />
+        <FileItem Name="Main#EQUIP_EntryConveyor.bin" Library="IEC61499.dll" />
+        <FileItem Name="Composites/Standard.IoModbus#MODBUS_HMI.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Basics/Standard.IoModbus#TIME2UDINT.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Adapters/Standard.IoModbus#IHwSlaveConfig.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Basics/Standard.IoModbus#MUL_2449E3A5F7EE2D347.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Composites/Standard.IoModbus#MODBUS.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Composites/Standard.IoModbus#MODBUSGENTCPS_HMI.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Basics/Standard.IoModbus#ONLINE_OFFLINE_INT.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Basics/Standard.IoModbus#DS_SELECTX_2536758B411A6CE51.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Composites/Standard.IoModbus#HW_OCINIT_ACK.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Adapters/Standard.IoModbus#IHwGenSlot.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Basics/Standard.IoModbus#ADD_2449E3A5F7EE2D347.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Basics/Standard.IoModbus#COMPARE_10593E80BE744DDAF.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Basics/Standard.IoModbus#SYMLINKMULTIVARSRC_75EA05D83EA26443.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Basics/Standard.IoModbus#SYMLINKMULTIVARDST_1559B0FF8170C9BA0.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Basics/Standard.IoModbus#NOT_42C76073DCEB1A7A.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Basics/Standard.IoModbus#E_REND_X_148CCC6046D4CE74C.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Composites/Standard.IoModbus#MODBUSGENTCPS.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Composites/Standard.IoModbus#MODBUSRCOIL8_HMI.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Basics/Standard.IoModbus#SYMLINKMULTIVARSRC_802772FD4080E26E.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Basics/Standard.IoModbus#PD_ANY_IN_17847B0F6BAB60A94.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Basics/Standard.IoModbus#SYMLINKMULTIVARDST_5A03F112CD5D470.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Basics/Standard.IoModbus#COMPARE_739E3FB559152FE.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Composites/Standard.IoModbus#MODBUSRCOIL8.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Composites/Standard.IoModbus#MODBUSWCOIL8_HMI.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Composites/Standard.IoModbus#HW_OCINIT.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Basics/Standard.IoModbus#SYMLINKMULTIVARDST_91EC7219ED37E472.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Basics/Standard.IoModbus#PD_ANY_OUT_1454F48B413EF8B3F.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Composites/Standard.IoModbus#MODBUSWCOIL8.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Composites/Standard.IoModbus#MODBUSRREG1_HMI.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Basics/Standard.IoModbus#SYMLINKMULTIVARSRC_18556BCA74EA878F1.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Basics/Standard.IoModbus#PD_ANY_IN_842F42743DE0B99A.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Composites/Standard.IoModbus#MODBUSRREG1.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Composites/Standard.IoModbus#MODBUSWREG4_HMI.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Basics/Standard.IoModbus#SYMLINKMULTIVARDST_15292F208F22048C1.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Basics/Standard.IoModbus#PD_ANY_OUT_26E1DB3412DDAC62.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Composites/Standard.IoModbus#MODBUSWREG4.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Composites/Standard.IoModbus#MODBUSSLOTEND.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+        <FileItem Name="Composites/Standard.IoModbus#MODBUSSLAVEND.bin" Library="Standard.IoModbus.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" />
+      </FileGroup>
+      <FileGroup Name="UnusedLibraryItems">
+        <FileItem Name="Basics/SE.DPAC#FilterMode.bin" Library="SE.DPAC.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="accfc058-2ec8-8af5-9ef1-6d8c379525c6" />
+        <FileItem Name="DataTypes/SE.DPAC#INIT_MODE.bin" Library="SE.DPAC.90E02843-42CC-4C2C-B657-AB6EE7D00471.dll" BuildId="39c5700e-a118-ecb5-64e4-5941391237ca" />
+      </FileGroup>
+    </DeployInformation>
+    <DeployInformation Type="HWConfig">
+      <FileGroup Name="FileList">
+        <FileItem Name="FactoryIO\HWConfig\MODBUS.xml" />
+      </FileGroup>
+      <FileGroup Name="DeployList">
+        <FileItem Name="FactoryIO\HWConfig\MODBUS.xml" />
+      </FileGroup>
+    </DeployInformation>
+  </Deployable>
+</DeployFiles>

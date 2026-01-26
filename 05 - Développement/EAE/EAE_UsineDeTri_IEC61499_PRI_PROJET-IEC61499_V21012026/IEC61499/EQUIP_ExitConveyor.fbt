@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FBType SYSTEM "../LibraryElement.dtd">
+<FBType GUID="6668e267-e357-47bb-84c8-cd483a8b91c6" Name="EQUIP_ExitConveyor" Comment="Composite Function Block Type" Namespace="Main">
+  <Attribute Name="Configuration.FB.IDCounter" Value="6" />
+  <Identification Standard="61499-2" />
+  <VersionInfo Organization="Schneider Electric" Version="0.0" Author=" " Date="08/01/2026" Remarks="template" />
+  <InterfaceList>
+    <EventInputs>
+      <Event Name="INIT" Comment="Initialization Request">
+        <With Var="QI" />
+      </Event>
+      <Event Name="REQ" Comment="Normal Execution Request">
+        <With Var="QI" />
+        <With Var="Exit_conveyor" />
+      </Event>
+    </EventInputs>
+    <EventOutputs>
+      <Event Name="INITO" Comment="Initialization Confirm">
+        <With Var="QO" />
+      </Event>
+      <Event Name="CNF" Comment="Execution Confirmation">
+        <With Var="QO" />
+        <With Var="At_exit_Value" />
+      </Event>
+      <Event Name="PIECE_SORTIE" />
+    </EventOutputs>
+    <InputVars>
+      <VarDeclaration Name="QI" Type="BOOL" Comment="Input event qualifier" />
+      <VarDeclaration Name="Exit_conveyor" Type="BOOL" />
+    </InputVars>
+    <OutputVars>
+      <VarDeclaration Name="QO" Type="BOOL" Comment="Output event qualifier" />
+      <VarDeclaration Name="At_exit_Value" Type="BOOL" Comment="Valeur actuelle du capteur At_exit" />
+    </OutputVars>
+  </InterfaceList>
+  <FBNetwork>
+    <FB ID="4" UID="1" Name="ReadAtExit" Type="SYMLINKMULTIVARDST_1559B0FF8170C9BA0" x="800" y="1200" Namespace="Main">
+      <Attribute Name="Configuration.GenericFBType.InterfaceParams" Value="Runtime.System#I:=1;VALUE${I}:BOOL" />
+      <Parameter Name="NAME1" Value="'At_exit'" />
+    </FB>
+    <FB ID="5" UID="3" Name="WriteAtExit" Type="SYMLINKMULTIVARSRC_1559B0FF8170C9BA0" x="3380" y="1200" Namespace="Main">
+      <Attribute Name="Configuration.GenericFBType.InterfaceParams" Value="Runtime.System#I:=1;VALUE${I}:BOOL" />
+      <Parameter Name="NAME1" Value="'Exit_conveyor'" />
+    </FB>
+    <FB ID="6" Name="FallingTrig" Type="E_F_TRIG" x="1720" y="1720" Namespace="IEC61499.Standard" />
+    <Input Name="INIT" x="440" y="1212" Type="Event" />
+    <Input Name="REQ" x="440" y="1272" Type="Event" />
+    <Input Name="QI" x="360" y="1472" Type="Data" />
+    <Input Name="Exit_conveyor" x="2780" y="1592" Type="Data" />
+    <Output Name="INITO" x="4060" y="1212" Type="Event" />
+    <Output Name="CNF" x="4060" y="1272" Type="Event" />
+    <Output Name="QO" x="4060" y="1472" Type="Data" />
+    <Output Name="At_exit_Value" x="4060" y="1532" Type="Data" />
+    <Output Name="PIECE_SORTIE" x="2020" y="1732" Type="Event" />
+    <EventConnections>
+      <Connection Source="INIT" Destination="ReadAtExit.INIT" />
+      <Connection Source="REQ" Destination="ReadAtExit.REQ" dx1="9.541748" />
+      <Connection Source="WriteAtExit.INITO" Destination="INITO" />
+      <Connection Source="WriteAtExit.CNF" Destination="CNF" dx1="78.4375" />
+      <Connection Source="ReadAtExit.INITO" Destination="WriteAtExit.INIT" />
+      <Connection Source="ReadAtExit.CNF" Destination="WriteAtExit.REQ" />
+      <Connection Source="ReadAtExit.CNF" Destination="FallingTrig.EI" dx1="81.625" />
+      <Connection Source="FallingTrig.EO" Destination="PIECE_SORTIE" />
+    </EventConnections>
+    <DataConnections>
+      <Connection Source="WriteAtExit.QO" Destination="QO" dx1="86.87476" />
+      <Connection Source="Exit_conveyor" Destination="WriteAtExit.VALUE1" />
+      <Connection Source="QI" Destination="ReadAtExit.QI">
+        <Points>
+          <Points>
+            <X>178.6979</X>
+            <Y>374.999969</Y>
+          </Points>
+          <Points>
+            <X>172.5</X>
+            <Y>374.999969</Y>
+          </Points>
+          <Points>
+            <X>172.5</X>
+            <Y>375</Y>
+          </Points>
+          <Points>
+            <X>195</X>
+            <Y>375</Y>
+          </Points>
+        </Points>
+      </Connection>
+      <Connection Source="ReadAtExit.QO" Destination="WriteAtExit.QI" />
+      <Connection Source="ReadAtExit.VALUE1" Destination="FallingTrig.QI" dx1="41.625" />
+      <Connection Source="ReadAtExit.VALUE1" Destination="At_exit_Value" dx1="110" />
+    </DataConnections>
+  </FBNetwork>
+</FBType>

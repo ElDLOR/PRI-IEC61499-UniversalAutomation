@@ -1,0 +1,13 @@
+{
+  "solutionId": "dfbe9041-aedb-47a3-9f0d-b6df30113be9",
+  "csConfHash": "97ca67c64e9ea8e6aff5b4ac54e7604d76a7e40d7685ef63154687c30819aa28",
+  "deviceConfiguration": "{\u0022solutionId\u0022:\u0022dfbe9041-aedb-47a3-9f0d-b6df30113be9\u0022,\u0022csConfHash\u0022:\u002297ca67c64e9ea8e6aff5b4ac54e7604d76a7e40d7685ef63154687c30819aa28\u0022}",
+  "userInformation": "{\u0022version\u0022:\u00221\u0022,\u0022users_list\u0022:[{\u0022user_name\u0022:\u0022DamienLorigeon\u0022,\u0022password\u0022:\u0022$1$401869BA22ABE51F57ED8C7A623C75199C454DB1E87335A200ABDDAD8440815E$1ABF2B2AEB0C86CF99BD1C61501C2C0360431D27BADBF2A680DD8BA116CFB1BE\u0022,\u0022state\u0022:\u0022Active\u0022,\u0022AccountStartDate\u0022:\u0022\u0022,\u0022assigned_role\u0022:[\u0022DamienLorigeon\u0022]}]}",
+  "roleInformation": "{\u0022version\u0022:\u00221\u0022,\u0022roles_list\u0022:[{\u0022name\u0022:\u0022DamienLorigeon\u0022,\u0022permission_name\u0022:[\u0022Security Management\u0022,\u0022File Transfer\u0022,\u0022IP Configuration\u0022,\u0022Firmware Management\u0022,\u0022LaunchCanvas\u0022,\u0022OpenFacePlate\u0022,\u0022EditSymbol\u0022,\u0022Level_15\u0022]}]}",
+  "anonymousCsConfHash": "a2b76b73c2ef2047823fd066d51eb2daf2cf813f9ec1e9c35255f4d325126cb9",
+  "anonymousDeviceConfiguration": "{\u0022solutionId\u0022:\u0022dfbe9041-aedb-47a3-9f0d-b6df30113be9\u0022,\u0022csConfHash\u0022:\u0022a2b76b73c2ef2047823fd066d51eb2daf2cf813f9ec1e9c35255f4d325126cb9\u0022}",
+  "anonymousUserInformation": "{\u0022users_list\u0022:[{\u0022user_name\u0022:\u0022Anonymous\u0022,\u0022password\u0022:\u0022cb366a250499db16cfa075932fd153c2baf2dfdda46a14082b7ddf3eab1118d5\u0022,\u0022state\u0022:\u0022Active\u0022,\u0022AccountStartDate\u0022:null,\u0022assigned_role\u0022:[\u0022Anonymous\u0022]}],\u0022version\u0022:\u00221\u0022}",
+  "anonymousRoleInformation": "{\u0022roles_list\u0022:[{\u0022name\u0022:\u0022Anonymous\u0022,\u0022permission_name\u0022:[\u0022Security Management\u0022,\u0022File Transfer\u0022,\u0022IP Configuration\u0022,\u0022Firmware Management\u0022,\u0022LaunchCanvas\u0022,\u0022OpenFacePlate\u0022,\u0022EditSymbol\u0022,\u0022Level_15\u0022]}],\u0022version\u0022:\u00221\u0022}",
+  "solutionName": "Usine_de_tri_PRI_PROJET-IEC61499_V0_1",
+  "certThumbprint": ""
+}

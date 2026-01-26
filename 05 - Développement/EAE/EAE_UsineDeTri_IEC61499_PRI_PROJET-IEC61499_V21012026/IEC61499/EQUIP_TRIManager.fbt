@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FBType SYSTEM "../LibraryElement.dtd">
+<FBType GUID="b9bcece7-861c-4e59-ae8c-6f22be61fd4f" Name="EQUIP_TRIManager" Comment="Composite Function Block Type" Namespace="Main">
+  <Attribute Name="Configuration.FB.IDCounter" Value="1" />
+  <Identification Standard="61499-2" />
+  <VersionInfo Organization="Schneider Electric" Version="0.0" Author=" " Date="08/01/2026" Remarks="template" />
+  <InterfaceList>
+    <EventInputs>
+      <Event Name="INIT" Comment="Initialization Request">
+        <With Var="QI" />
+      </Event>
+      <Event Name="REQ" Comment="Normal Execution Request">
+        <With Var="QI" />
+        <With Var="At_exit" />
+      </Event>
+      <Event Name="PIECE_SORTIE" />
+      <Event Name="RESET" Comment="Reset compteurs et etapes" />
+      <Event Name="AU" Comment="Arret urgence" />
+    </EventInputs>
+    <EventOutputs>
+      <Event Name="INITO" Comment="Initialization Confirm">
+        <With Var="QO" />
+      </Event>
+      <Event Name="CNF" Comment="Execution Confirmation">
+        <With Var="QO" />
+        <With Var="Sorter_Actif" />
+        <With Var="Exit_conveyor" />
+        <With Var="Counter_1" />
+        <With Var="Counter_2" />
+        <With Var="Counter_3" />
+      </Event>
+      <Event Name="BLOCK" Comment="Bloquer le convoyeur d'entrée" />
+      <Event Name="UNBLOCK" Comment="Débloquer le convoyeur d'entrée" />
+    </EventOutputs>
+    <InputVars>
+      <VarDeclaration Name="QI" Type="BOOL" Comment="Input event qualifier" />
+      <VarDeclaration Name="At_exit" Type="BOOL" Comment="Capteur sortie - TRUE si piece presente" />
+    </InputVars>
+    <OutputVars>
+      <VarDeclaration Name="QO" Type="BOOL" Comment="Output event qualifier" />
+      <VarDeclaration Name="Sorter_Actif" Type="INT" />
+      <VarDeclaration Name="Exit_conveyor" Type="BOOL" />
+      <VarDeclaration Name="Counter_1" Type="INT" />
+      <VarDeclaration Name="Counter_2" Type="INT" />
+      <VarDeclaration Name="Counter_3" Type="INT" />
+    </OutputVars>
+    <Plugs>
+      <AdapterDeclaration Name="CouleurIn" Type="ICouleur" Namespace="Main" Comment="Entrée couleur" x="20" y="620" />
+    </Plugs>
+  </InterfaceList>
+  <FBNetwork>
+    <FB ID="1" Name="FB1" Type="FB_TriLogic" x="1480" y="440" Namespace="Main" />
+    <Input Name="INIT" x="959.9999" y="452" Type="Event" />
+    <Input Name="REQ" x="960" y="572" Type="Event" />
+    <Input Name="QI" x="940" y="952" Type="Data" />
+    <Input Name="At_exit" x="940" y="1132" Type="Data" />
+    <Input Name="CouleurIn" x="320" y="232" Type="Adapter" />
+    <Input Name="PIECE_SORTIE" x="960" y="632" Type="Event" />
+    <Input Name="RESET" x="960" y="692" Type="Event" />
+    <Input Name="AU" x="960" y="752" Type="Event" />
+    <Output Name="INITO" x="2440" y="452" Type="Event" />
+    <Output Name="CNF" x="2440" y="512" Type="Event" />
+    <Output Name="BLOCK" x="2440" y="572" Type="Event" />
+    <Output Name="UNBLOCK" x="2440" y="632" Type="Event" />
+    <Output Name="QO" x="2460" y="952" Type="Data" />
+    <Output Name="Sorter_Actif" x="2460" y="1012" Type="Data" />
+    <Output Name="Exit_conveyor" x="2460" y="1072" Type="Data" />
+    <Output Name="Counter_1" x="2460" y="1132" Type="Data" />
+    <Output Name="Counter_2" x="2460" y="1192" Type="Data" />
+    <Output Name="Counter_3" x="2460" y="1252" Type="Data" />
+    <EventConnections>
+      <Connection Source="FB1.INITO" Destination="INITO" />
+      <Connection Source="FB1.CNF" Destination="CNF" />
+      <Connection Source="FB1.BLOCK" Destination="BLOCK" />
+      <Connection Source="FB1.UNBLOCK" Destination="UNBLOCK" />
+      <Connection Source="INIT" Destination="FB1.INIT" />
+      <Connection Source="REQ" Destination="FB1.REQ" />
+      <Connection Source="CouleurIn.NEW_COLOR" Destination="FB1.NEW_COLOR" dx1="55.18753" />
+      <Connection Source="PIECE_SORTIE" Destination="FB1.PIECE_SORTIE" />
+      <Connection Source="RESET" Destination="FB1.RESET" />
+      <Connection Source="AU" Destination="FB1.AU" />
+    </EventConnections>
+    <DataConnections>
+      <Connection Source="FB1.QO" Destination="QO" />
+      <Connection Source="FB1.Exit_conveyor" Destination="Exit_conveyor" />
+      <Connection Source="FB1.Sorter_Actif" Destination="Sorter_Actif" />
+      <Connection Source="FB1.Counter_1" Destination="Counter_1" />
+      <Connection Source="FB1.Counter_2" Destination="Counter_2" />
+      <Connection Source="FB1.Counter_3" Destination="Counter_3" />
+      <Connection Source="CouleurIn.Couleur" Destination="FB1.Couleur" dx1="60.00003" />
+      <Connection Source="CouleurIn.Changement" Destination="FB1.Changement" dx1="40" />
+      <Connection Source="QI" Destination="FB1.QI" />
+      <Connection Source="At_exit" Destination="FB1.At_exit" />
+    </DataConnections>
+  </FBNetwork>
+</FBType>
