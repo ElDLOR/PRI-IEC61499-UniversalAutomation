@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Folders xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="Usine_de_tri_PRI_PROJET-IEC61499_V0_1" Version="1.6.0.0" xmlns="http://www.nxtcontrol.com/IEC61499.xsd">
-  <Folder Type="SystemDevice" Name="Root">
-    <Items>
-      <item>1f57b87a-52a6-47c9-9509-d7b4e1173fed</item>
-    </Items>
-  </Folder>
-</Folders>
